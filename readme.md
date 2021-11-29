@@ -45,7 +45,7 @@ output_fallback = my-headphones-name
 ```
 
 input: should be the name of the loopback device used. For example 'VB-Cable'.<br/>
-output_primary: must be headphones or a bluetooth device (headphones for example).<br/>
+output_primary: must be headphones or a bluetooth audio device (speakers or headphones).<br/>
 output_fallback: will be used if the primary device is not connected.<br/>
 
 NOTE: Output to internal system speakers is not possible since it will conflict with the loop back device.
