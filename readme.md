@@ -12,20 +12,34 @@ More info with screen shots here:
 
 (https://knutas.com/birdify/)
 
-## DEPENDENCIES 
+## DEPENDENCIES
+
+- Python 3.9.1
+- pip 21.3.1
 
 - VB-cable (or other similar software, to create audio loop back)
 Download installer from, https://vb-audio.com/Cable/index.htm, 
-and set 'VB-Cable' as the primary system input and output device.
+and set 'VB-Cable' as the primary system input and output devices.
 
-- tensorflow:
-pip install tensorflow
+## INSTALLATION
 
-- librosa:
-pip install librosa
+```bash
+$ mkdir BirdifyApp
+$ cd BirdifyApp
+$ python -m venv env
+$ source env/bin/activate
+$ pip install pandas
+$ pip install pyside6
+$ pip install tensorflow
+$ pip install matplotlib
+$ pip install librosa
+```
 
-- matplotlib:
-pip install matplotlib
+Start the app by running the main module:
+
+```bash
+$ ./env/bin/python src/BirdifyAppGUI.py
+```
 
 TODO
 Add missing pieces...
