@@ -1,10 +1,15 @@
 PENDING
 
+1 Add more tests
 2 interactive selection of prio in/out devices, save selection in config file.
 3 alerts on selected species that is detected
 4 filter away/set black list species
 5 Export lists/results to file or email/share etc.?
 6 links from species names in lists with search-url to xeno-canto web-site
+.
+.
+99 docker image for ubuntu with working sound, if it's even possible, some tips here:
+    https://stackoverflow.com/questions/41083436/how-to-play-sound-in-a-docker-container-on-mac-os-yosemite
 
 DONE 
 x using prio audio sources at startup
