@@ -19,7 +19,7 @@ More info with screen shots here:
 
 - VB-cable (or other similar software, to create audio loop back)
 Download installer from, https://vb-audio.com/Cable/index.htm, 
-and set 'VB-Cable' as the primary system input and output devices.
+and (in System Settings) assign 'VB-Cable' as the primary system input and output devices.
 
 ## INSTALLATION
 
@@ -50,7 +50,10 @@ output_fallback: will be used if the primary device is not connected.<br/>
 
 NOTE: Output to internal system speakers is not possible since it will conflict with the loop back device.
 
+## RUNNING THE APP
+
 Start the app by running the main module:
+
 
 ```bash
 $ ./env/bin/python src/BirdifyAppGUI.py
