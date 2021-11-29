@@ -24,7 +24,7 @@ and set 'VB-Cable' as the primary system input and output devices.
 ## INSTALLATION
 
 ```bash
-$ mkdir BirdifyApp
+$ git clone https://github.com/gorlang/BirdifyApp
 $ cd BirdifyApp
 $ python -m venv env
 $ source env/bin/activate
