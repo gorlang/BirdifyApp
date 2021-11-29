@@ -1,0 +1,102 @@
+,name_sci,name_en,name_sv
+0,Struthionidae,Ostriches,Strutsar
+1,Struthio camelus,Common Ostrich,struts
+2,Struthio molybdophanes,Somali Ostrich,somaliastruts
+3,Rheidae,Rheas,Nanduer
+4,Rhea americana,Greater Rhea,större nandu
+5,Rhea pennata,Lesser Rhea,mindre nandu
+6,Apterygidae,Kiwis,Kivier
+7,Apteryx australis,Southern Brown Kiwi,sydkivi
+8,Apteryx mantelli,North Island Brown Kiwi,brunkivi
+9,Apteryx rowi,Okarito Kiwi,okaritokivi
+10,Apteryx owenii,Little Spotted Kiwi,mindre fläckkivi
+11,Apteryx haastii,Great Spotted Kiwi,större fläckkivi
+12,Casuariidae,"Cassowaries, Emu",Kasuarer
+13,Casuarius casuarius,Southern Cassowary,hjälmkasuar
+14,Casuarius bennetti,Dwarf Cassowary,dvärgkasuar
+15,Casuarius unappendiculatus,Northern Cassowary,enflikig kasuar
+16,Dromaius novaehollandiae,Emu,emu
+17,Tinamidae,Tinamous,Tinamoer
+18,Tinamus tao,Grey Tinamou,grå tinamo
+19,Tinamus solitarius,Solitary Tinamou,solitärtinamo
+20,Tinamus osgoodi,Black Tinamou,svart tinamo
+21,Tinamus major,Great Tinamou,större tinamo
+22,Tinamus guttatus,White-throated Tinamou,vitstrupig tinamo
+23,Nothocercus bonapartei,Highland Tinamou,höglandstinamo
+24,Nothocercus julius,Tawny-breasted Tinamou,brunbröstad tinamo
+25,Nothocercus nigrocapillus,Hooded Tinamou,kamtinamo
+26,Crypturellus berlepschi,Berlepsch's Tinamou,sottinamo
+27,Crypturellus cinereus,Cinereous Tinamou,askgrå tinamo
+28,Crypturellus soui,Little Tinamou,mindre tinamo
+29,Crypturellus ptaritepui,Tepui Tinamou,tepuítinamo
+30,Crypturellus obsoletus,Brown Tinamou,brun tinamo
+31,Crypturellus undulatus,Undulated Tinamou,amazontinamo
+32,Crypturellus transfasciatus,Pale-browed Tinamou,ljusbrynad tinamo
+33,Crypturellus strigulosus,Brazilian Tinamou,brasilientinamo
+34,Crypturellus duidae,Grey-legged Tinamou,gråbent tinamo
+35,Crypturellus erythropus,Red-legged Tinamou,rödbent tinamo
+36,Crypturellus noctivagus,Yellow-legged Tinamou,gulbent tinamo
+37,Crypturellus atrocapillus,Black-capped Tinamou,svarthättad tinamo
+38,Crypturellus cinnamomeus,Thicket Tinamou,snårtinamo
+39,Crypturellus boucardi,Slaty-breasted Tinamou,skiffertinamo
+40,Crypturellus kerriae,Choco Tinamou,chocótinamo
+41,Crypturellus variegatus,Variegated Tinamou,broktinamo
+42,Crypturellus brevirostris,Rusty Tinamou,rosttinamo
+43,Crypturellus bartletti,Bartlett's Tinamou,Bartletts tinamo
+44,Crypturellus parvirostris,Small-billed Tinamou,kortnäbbad tinamo
+45,Crypturellus casiquiare,Barred Tinamou,strimmig tinamo
+46,Crypturellus tataupa,Tataupa Tinamou,tataupatinamo
+47,Rhynchotus rufescens,Red-winged Tinamou,rostvingad tinamo
+48,Rhynchotus maculicollis,Huayco Tinamou,huaycotinamo
+49,Nothoprocta taczanowskii,Taczanowski's Tinamou,taczanowskitinamo
+50,Nothoprocta ornata,Ornate Tinamou,tofstinamo
+51,Nothoprocta perdicaria,Chilean Tinamou,chiletinamo
+52,Nothoprocta cinerascens,Brushland Tinamou,busktinamo
+53,Nothoprocta pentlandii,Andean Tinamou,andinsk tinamo
+54,Nothoprocta curvirostris,Curve-billed Tinamou,bågnäbbad tinamo
+55,Nothura boraquira,White-bellied Nothura,vitbukig tinamo
+56,Nothura minor,Lesser Nothura,småtinamo
+57,Nothura darwinii,Darwin's Nothura,darwintinamo
+58,Nothura maculosa,Spotted Nothura,fläckig tinamo
+59,Taoniscus nanus,Dwarf Tinamou,dvärgtinamo
+60,Eudromia elegans,Elegant Crested Tinamou,prakttinamo
+61,Eudromia formosa,Quebracho Crested Tinamou,quebrachotinamo
+62,Tinamotis pentlandii,Puna Tinamou,punatinamo
+63,Tinamotis ingoufi,Patagonian Tinamou,patagonientinamo
+64,Anhimidae,Screamers,Värnfåglar
+65,Anhima cornuta,Horned Screamer,hornvärnfågel
+66,Chauna chavaria,Northern Screamer,svarthalsad värnfågel
+67,Chauna torquata,Southern Screamer,tofsvärnfågel
+68,Anseranatidae,Magpie Goose,Skatgäss
+69,Anseranas semipalmata,Magpie Goose,skatgås
+70,Anatidae,"Ducks, Geese, Swans",Änder
+71,Dendrocygna viduata,White-faced Whistling Duck,vithuvad visseland
+72,Dendrocygna autumnalis,Black-bellied Whistling Duck,svartbukig visseland
+73,Dendrocygna guttata,Spotted Whistling Duck,fläckig visseland
+74,Dendrocygna arborea,West Indian Whistling Duck,karibvisseland
+75,Dendrocygna bicolor,Fulvous Whistling Duck,brun visseland
+76,Dendrocygna eytoni,Plumed Whistling Duck,plymvisseland
+77,Dendrocygna arcuata,Wandering Whistling Duck,vandringsvisseland
+78,Dendrocygna javanica,Lesser Whistling Duck,orientvisseland
+79,Thalassornis leuconotus,White-backed Duck,vitryggig and
+80,Cereopsis novaehollandiae,Cape Barren Goose,hönsgås
+81,Branta bernicla,Brant Goose,prutgås
+82,Branta ruficollis,Red-breasted Goose,rödhalsad gås
+83,Branta sandvicensis,Nene,hawaiigås
+84,Branta canadensis,Canada Goose,kanadagås
+85,Branta leucopsis,Barnacle Goose,vitkindad gås
+86,Branta hutchinsii,Cackling Goose,dvärgkanadagås
+87,Anser indicus,Bar-headed Goose,stripgås
+88,Anser canagicus,Emperor Goose,kejsargås
+89,Anser rossii,Ross's Goose,dvärgsnögås
+90,Anser caerulescens,Snow Goose,snögås
+91,Anser anser,Greylag Goose,grågås
+92,Anser cygnoides,Swan Goose,svangås
+93,Anser fabalis,Taiga Bean Goose,tajgasädgås (1)
+94,Anser brachyrhynchus,Pink-footed Goose,spetsbergsgås
+95,Anser serrirostris,Tundra Bean Goose,tundrasädgås (1)
+96,Anser albifrons,Greater White-fronted Goose,bläsgås
+97,Anser erythropus,Lesser White-fronted Goose,fjällgås
+98,Coscoroba coscoroba,Coscoroba Swan,coscorobasvan
+99,Cygnus atratus,Black Swan,svart svan
+100,Cygnus melancoryphus,Black-necked Swan,svarthalsad svan

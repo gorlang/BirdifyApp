@@ -1,0 +1,22 @@
+PENDING
+
+2 interactive selection of prio in/out devices, save selection in config file.
+3 alerts on selected species that is detected
+4 filter away/set black list species
+5 Export lists/results to file or email/share etc.?
+6 links from species names in lists with search-url to xeno-canto web-site
+
+DONE 
+x using prio audio sources at startup
+x created AppController för start stop of audio and detection services
+x settings, start stop of audio and detection, precursor for 2. in/out selections
+x Display spectograms by button click from files
+x Drag and drop import of files to analyze
+x Analyze files on disc + Reports.
+x Species list that displays only unique species, in Search view perhaps.
+x Audio input/output handling and modulization, 
+x ampltude monitor extracted to separate module AmplitudeMonitor
+X Detect quality indicator on first page, current, last/per 60 seconds, timeseries? 
+    a. simple, and small horizontal bar chart with 4 color bar for each level, constant width.
+X Implement search page (First version)
+X Settings, specify month (or period) for Weeks
