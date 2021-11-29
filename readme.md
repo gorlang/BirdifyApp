@@ -1,29 +1,39 @@
-DEPENDENCIES 
-Used for input/output audio.
+## DESCRIPTION
 
-- portaudio (low level audio package)
-- pyaudio (python interface for portaudio)
-- VB-cable (to create loop back, seems to work fine on OS-X Mojave)
+Birdify will assist you on your virtual birding tours. It listens to the laptop audio output, analyzes the signal and detects any bird sounds.
 
-INSTALLATION
+When you visit your favorite nature YT-streams it can help you to identify a large number of the birds of the world (if the audio is of reasonably good quality). Or why not listen to your own recordings, you might find birds that you have overlooked! 
 
-1 Install brew, see brew homepage for instructions https://brew.sh.
-Brew is used to install portaudio.
+Birdify is a desktop-app created with Qt/Pyside6 and the AI functionality is powered by BirdNET:s TensorFlow model BirdNETLite, developed at The Cornell Lab of Ornithology and Chemnitz University of Technology.
 
-NOTE! If brew not working correctly, you might need to uninstall and reinstall it.
-Cleanup after reinstalling brew by doing (installation root-path migh vary):
-rm -rf /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core; brew update
+More info with screen shots here:
 
-2 Install portaudio with brew:
-brew install portaudio
+(https://knutas.com/birdify/)
 
-3 Install pyaudio (needs portaudio & Xcode command line tools)
-pip install pyaudio
+## DEPENDENCIES 
 
-4 Install VB-cable
+- VB-cable (or other similar software, to create audio loop back)
 Download installer from, https://vb-audio.com/Cable/index.htm, 
-and set VB-Cable as the primary system input/output sound devices.
+and set 'VB-Cable' as the primary system input and output device.
 
-5 pip install tensorflow
+- tensorflow
+pip install tensorflow
 
-6 pip install librosa
+- librosa
+pip install librosa
+
+- matplotlib
+pip install matplotlib
+
+TODO
+Add missing pieces...
+
+## LICENSE
+
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+## ATTRIBUTIONS
+
+1. The BirdNETLite Tensorflow model is developed at The Cornell Lab of Ornithology and Chemnitz University of Technology. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+2. Fugue Icons (C) 2013 Yusuke Kamiyamane. All rights reserved. Icons are licensed under a Creative Commons Attribution 3.0 License. (http://creativecommons.org/licenses/by/3.0/)
