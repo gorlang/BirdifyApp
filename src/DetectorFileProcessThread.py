@@ -105,9 +105,8 @@ class DetectorFileProcessThread(QThread):
                     stats = f"Pass {curpass+1}/{NUM_PASSES}, max iterations: {max_iterations}, time: {elapsed}{unit}"
                     print(stats)
                     if len(result) > 0:
-                        self.detect_result.emit(json.dumps(result)) # TODO fix list return?
+                        self.detect_result.emit(json.dumps(result))
                     curpass += 1
-                #QThread.msleep(200) # simulate delay, for test only
             self.mutex.lock()
             if not self.restart:
                 self.condition.wait(self.mutex)

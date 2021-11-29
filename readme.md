@@ -35,14 +35,26 @@ $ pip install matplotlib
 $ pip install librosa
 ```
 
+Audio input/output devices are configurated in the file app-config.cfg:
+
+```bash
+[AUDIO]
+input = VB-Cable
+output_primary = my-bluetooth-device-name
+output_fallback = my-headphones-name
+```
+
+input: should be the name of the loopback device used. For example 'VB-Cable'.
+output_primary: must be headphones or a bluetooth device (headphones for example).
+output_fallback: will be used if the primary device is not connected.
+
+NOTE: Output to internal system speakers is not possible since it will conflict with the loop back device.
+
 Start the app by running the main module:
 
 ```bash
 $ ./env/bin/python src/BirdifyAppGUI.py
 ```
-
-TODO
-Add missing pieces...
 
 ## LICENSE
 

@@ -5,17 +5,17 @@ from PySide6.QtWidgets import QMessageBox
 
 class AudioDevices():
     """
-    TODO improve error handling and fallback etc.
+    TODO improve error handling
     """
     def __init__(self, config):
         self._input_devices = QMediaDevices.audioInputs()
         self._output_devices = QMediaDevices.audioOutputs()
 
-        self._selected_device_in = 0
-        self._selected_device_out = 1 # 1 = Raindrops
+        self._selected_device_in = None
+        self._selected_device_out = None
 
-        self.priorityDevicesOut = config.DEVICE_NAMES_OUT # ["Raindrops", "Built-in Output"]
-        self.priorityDevicesIn = config.DEVICE_NAMES_IN # ["VB-Cable"]
+        self.priorityDevicesOut = config.DEVICE_NAMES_OUT
+        self.priorityDevicesIn = config.DEVICE_NAMES_IN
 
         if not self._input_devices:
             QMessageBox.warning(None, "audio", "There is no audio input device available.")
@@ -70,4 +70,5 @@ class AudioDevices():
             self._selected_device_in = result[0]["id"]
             return self.selectedInput()
         return None
+
 

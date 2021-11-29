@@ -1,12 +1,17 @@
 
+import configparser
+
 class AppConfig():
     def __init__(self):
         self.TEST = False
         print("TEST=",  self.TEST)
-        self.APP_NAME = "Birdify!"
         self.BASE_PATH = "src/"
-        self.DEVICE_NAMES_OUT = ["Raindrops"] # exclude "Built-in Output" for now to avoid speaaker output
-        self.DEVICE_NAMES_IN = ["VB-Cable"]
+        cfg = configparser.RawConfigParser()
+        cfg.read(self.BASE_PATH + 'app-config.cfg')
+        cfg_audio = dict(cfg.items('AUDIO'))
+        self.APP_NAME = "Birdify!"
+        self.DEVICE_NAMES_OUT = [cfg_audio["output_primary"], cfg_audio["output_fallback"]] # from file
+        self.DEVICE_NAMES_IN = [cfg_audio["input"]] # from file
         self.FONT = 'Arial'
         self.WINDOW_SIZE_SCALE = 0.5 # scaled factor to available win height
         self.AUDIO_FILE_TYPES = ["mp3", "wav"]
@@ -64,4 +69,6 @@ class AppConfig():
 
     def isTest(self):
         return self.TEST
+
+
 

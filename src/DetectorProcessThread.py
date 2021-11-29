@@ -94,7 +94,6 @@ class DetectorProcessThread(QThread):
                     if len(result) > 0:
                         self.detect_result.emit(json.dumps(result[0])) # return only first item
                     curpass += 1
-                #QThread.msleep(200) # simulate delay, for test only
             self.mutex.lock()
             if not self.restart:
                 self.condition.wait(self.mutex)
