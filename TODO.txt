@@ -1,17 +1,20 @@
 PENDING
 
 1 Add more tests
-2 interactive selection of prio in/out devices, save selection in config file.
-3 alerts on selected species that is detected
+2 add new list in search/lists showing species with highest p-values (not the average like the current shows)
+2 interactive selection of prio in/out devices, save selection to config file.
+3 user should be able to get alerts on selected species that is detected
 4 filter away/set black list species
 5 Export lists/results to file or email/share etc.?
 6 links from species names in lists with search-url to xeno-canto web-site
+7 make detect in file and spectogram plot threaded (to avoid current small delay)
 .
 .
 99 docker image for ubuntu with working sound, if it's even possible, some tips here:
     https://stackoverflow.com/questions/41083436/how-to-play-sound-in-a-docker-container-on-mac-os-yosemite
 
 DONE 
+x added new theme
 x using prio audio sources at startup
 x created AppController för start stop of audio and detection services
 x settings, start stop of audio and detection, precursor for 2. in/out selections

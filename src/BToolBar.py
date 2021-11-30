@@ -1,4 +1,4 @@
-from PySide6.QtGui import QAction
+from PySide6.QtGui import QAction, QColor
 from PySide6.QtWidgets import QApplication, QMainWindow, QSizePolicy, QToolBar
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import QSize, Qt
@@ -8,8 +8,11 @@ log = Log()
 class BToolBar(QToolBar):
     def __init__(self, parent):
         super().__init__()
+       
         self._parent = parent
         self._config = parent._config
+        palette_theme = QColor(23, 23, 23) if self._config.THEME == "DARK" else QColor(43,43,43)
+        self.setPalette(palette_theme)
         self.setIconSize(QSize(24,24))
         self.setToolButtonStyle(Qt.ToolButtonTextUnderIcon) # ToolButtonTextBesideIcon | ToolButtonTextUnderIcon
         for button_name in self._config.BUTTONS:

@@ -134,7 +134,8 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
-    app.setPalette(BTheme().getDark())
+    theme = BTheme().getDark() if config.THEME == "DARK" else BTheme().getFugue()
+    app.setPalette(theme)
 
     input = AudioDevices(config).getExistingDeviceIn()
     if input == None:

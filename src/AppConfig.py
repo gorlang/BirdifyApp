@@ -7,15 +7,17 @@ class FileConfig():
         self.cfg.read(self.BASE_PATH + 'app-config.cfg')
         self.AUDIO = dict(self.cfg.items('AUDIO'))
         self.LOGGING = dict(self.cfg.items('LOGGING'))
+        self.THEME = dict(self.cfg.items('THEME'))
 
 class AppConfig():
     def __init__(self):
         self.TEST = False
-        self.BASE_PATH = "src/"
         self.APP_NAME = "Birdify!"
-        cfg_audio = FileConfig().AUDIO
-        self.DEVICE_NAMES_OUT = [cfg_audio["output_primary"], cfg_audio["output_fallback"]] # from cfg file
-        self.DEVICE_NAMES_IN = [cfg_audio["input"]] # from cfg file
+        fc = FileConfig()
+        self.THEME = fc.THEME["theme"]
+        self.BASE_PATH = "src/"
+        self.DEVICE_NAMES_OUT = [fc.AUDIO["output_primary"], fc.AUDIO["output_fallback"]] # from cfg file
+        self.DEVICE_NAMES_IN = [fc.AUDIO["input"]] # from cfg file
         self.FONT = 'Arial'
         self.WINDOW_SIZE_SCALE = 0.5 # scaled factor to available win height
         self.AUDIO_FILE_TYPES = ["mp3", "wav"]
@@ -40,8 +42,12 @@ class AppConfig():
         self.DETECT_BUFFFER_REFRESH_RATE = 80 # ms => 48000/4096 = 12 fps = 80 ms
         self.STATS_QUALITY_REFRESH_RATE = 30000 # ms => 30 secs
         self.P_DEFAULT = 0.1
-        self.COLOR_BG = "#2b2b2b"
-        self.COLOR_BG_DARK = "#202020"
+        if self.THEME == "DARK":
+            self.COLOR_BG = "#191919"
+            self.COLOR_BG_DARK = "#191919"
+        else:
+            self.COLOR_BG = "#2b2b2b"
+            self.COLOR_BG_DARK = "#202020"
         self.COLOR_GRID = "#2b2b2b"
         self.COLOR_LINE = "#F00"
         self.COLOR_BLUE = "#00F"
@@ -52,7 +58,7 @@ class AppConfig():
         self.COLOR_FONT_DARK = "#999"
         self.LANGS = ["sv", "en", "sci"]
         self.BUTTON_HOME = "Home"
-        self.BUTTON_SEARCH = "Search"
+        self.BUTTON_SEARCH = "Lists"
         self.BUTTON_LIBRARY = "Detected"
         self.BUTTON_SETTINGS = "Settings"
         self.BUTTON_LOCATION = "Location"
@@ -62,7 +68,8 @@ class AppConfig():
         self.DATA_COLS = ['Species', 'Quality', 'Time', 'Date', 'Country', 'Lat', 'Lon']
         self.COLOR_SCALE = ['#ff0000', '#ffa500', '#ffff00', '#008000','#008000']
         self.QUALITY_LEVELS = ["Low", "Average", "Good", "Excellent"]
-        self.ICONS = {
+
+        self.ICONS_FUGUE = {
                 self.BUTTON_HOME: "system-monitor.png",
                 self.BUTTON_SEARCH: "magnifier-zoom.png",
                 self.BUTTON_LIBRARY: "tick.png",
@@ -70,6 +77,20 @@ class AppConfig():
                 self.BUTTON_SETTINGS: "gear.png",
                 self.BUTTON_IMPORT: "application-import.png"
                 }
+        
+        self.ICONS_DARK = {
+                self.BUTTON_HOME: "free-circle-icon-6-2-2-0.png",
+                self.BUTTON_LIBRARY: "free-circle-icon-6-2-3-0.png",
+                self.BUTTON_SEARCH: "free-circle-icon-6-2-4-3.png",
+                self.BUTTON_LOCATION: "free-circle-icon-6-2-5-1.png",
+                self.BUTTON_SETTINGS: "free-circle-icon-6-2-1-6.png",
+                self.BUTTON_IMPORT: "free-circle-icon-6-2-4-0.png"
+                }
+
+        if self.THEME == "DARK":
+            self.ICONS = self.ICONS_DARK
+        else:
+            self.ICONS = self.ICONS_FUGUE
 
     def isTest(self):
         return self.TEST
