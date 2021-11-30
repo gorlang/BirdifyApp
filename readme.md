@@ -61,11 +61,17 @@ $ ./env/bin/python src/BirdifyAppGUI.py
 
 Log level (info or debug) can be set in file src/app-config.cfg (section LOGGING).
 
-Theme can be selected in the src/app-config.cfg file under section THEME.
-
 ```bash
 [LOGGING]
 level = info
+```
+
+Theme can be selected in the src/app-config.cfg file under section THEME.
+
+```bash
+[THEME]
+# DARK | FUGUE
+theme = DARK
 ```
 
 ## LICENSE
