@@ -1,5 +1,6 @@
 import librosa
 from PySide6.QtCore import (QMetaType, Signal, QMutex, QElapsedTimer, QMutexLocker, QThread, QWaitCondition)
+from BirdNETLite import loadModel
 from BirdifyAPI import detectSpecies, filterDetections, getNewArgMap
 from Decoder import Decoder
 import json
@@ -27,6 +28,7 @@ class DetectorFileProcessThread(QThread):
         self._detector_util = DetectorUtil(parent)
         self._callbackProgress = None
         self._progress = 0
+        self._tflite_model = loadModel()
 
     def setProgress(self, value):
         self._progress = value
@@ -87,7 +89,7 @@ class DetectorFileProcessThread(QThread):
                         mono_signal, 
                         parent._config.SAMPLE_RATE_DETECT,
                         argMap,
-                        parent._tflite_model,
+                        self._tflite_model,
                         self.setProgress)
                     resultList = filterDetections(detections, p_limit=parent._config.P_DEFAULT)
                     filteredList = resultList["filtered_list"]
