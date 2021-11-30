@@ -1,5 +1,7 @@
 from AudioSources import AudioSources
 from BTimer import BTimer
+from AppLog import Log
+log = Log()
 
 class AppController():
     def __init__(self, parent):
@@ -30,14 +32,14 @@ class AppController():
             self._audio_sources.connectAll()
             self._audio_sources.startAll()
             self._audio_on = True
-            print("Audio connection success!")
+            log.debug("Audio connection success!")
         except:
-            print("Audio connection failed!")
+            log.debug("Audio connection failed!")
 
     def stopAudio(self):
         try:
             self._audio_sources.stopAll()
             self._audio_on = False
-            print("Audio connections stopped!")
+            log.debug("Audio connections stopped!")
         except:
-            print("Audio connections failed to stop!")
+            log.debug("Audio connections failed to stop!")

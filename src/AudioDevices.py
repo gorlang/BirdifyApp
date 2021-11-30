@@ -1,7 +1,8 @@
 import sys
 from PySide6.QtMultimedia import QMediaDevices
 from PySide6.QtWidgets import QMessageBox
-
+from AppLog import Log
+log = Log()
 
 class AudioDevices():
     """
@@ -52,6 +53,7 @@ class AudioDevices():
 
     def getExistingDeviceOut(self):
         for d in self.priorityDevicesOut:
+            log.debug(f"AudioDevices.getExistingDeviceOut()={d}")
             result = list(filter(lambda x: x["name"] == d, self.getDevicesOut()))
             if (len(result) > 0):
                 break
@@ -62,7 +64,7 @@ class AudioDevices():
 
     def getExistingDeviceIn(self):
         for d in self.priorityDevicesIn:
-            print("d=", d)
+            log.debug(f"AudioDevices.getExistingDeviceIn()={d}")
             result = list(filter(lambda x: x["name"] == d, self.getDevicesIn()))
             if (len(result) > 0):
                 break

@@ -2,7 +2,8 @@ from PySide6.QtGui import QAction
 from PySide6.QtWidgets import QApplication, QMainWindow, QSizePolicy, QToolBar
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import QSize, Qt
-
+from AppLog import Log
+log = Log()
 
 class BToolBar(QToolBar):
     def __init__(self, parent):
@@ -23,7 +24,7 @@ class BToolBar(QToolBar):
 
     def toggleView(self):
         source = self.sender()
-        print("button press =", source.text())
+        log.debug(f"BToolBar().toggleView(), button={source.text()}")
         self._parent.stacked.setCurrentIndex(self._config.BUTTONS.index(source.text()))
         for a in self.actions():
             a.setChecked(False)

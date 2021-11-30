@@ -4,6 +4,8 @@ from BirdifyAPI import detectSpecies, filterDetections, getNewArgMap
 from Decoder import Decoder
 import json
 from DetectorUtil import DetectorUtil
+from AppLog import Log
+log = Log()
 
 NUM_PASSES = 1
 DEFAULT_RESULT_SIZE = 10
@@ -14,7 +16,7 @@ class DetectorFileProcessThread(QThread):
 
     def __init__(self, parent):
         super().__init__()
-        print("DetectorFileProcessThread().__init__")
+        log.debug("DetectorFileProcessThread().__init__")
         self._parent = parent
         self._result_size = 10
         self.mutex = QMutex()
@@ -33,7 +35,7 @@ class DetectorFileProcessThread(QThread):
         return self._progress
 
     def stop(self):
-        print("Thread().stop()")
+        log.debug("Thread().stop()")
         self.mutex.lock()
         self.abort = True
         self.condition.wakeOne()
@@ -53,11 +55,11 @@ class DetectorFileProcessThread(QThread):
                 self.restart = True
                 self.condition.wakeOne()
         else:
-            print("No file_path selected = ", file_path)
+            log.debug("No file_path selected = ", file_path)
 
     def run(self):
         timer = QElapsedTimer()
-        print("Thread().run()")
+        log.debug("Thread().run()")
         parent = self._parent
         min_detect_samples = parent._config.MIN_FILE_SIZE_SEC * parent._config.SAMPLE_RATE_DETECT
         while True:
@@ -94,7 +96,7 @@ class DetectorFileProcessThread(QThread):
                             result_dict = self._detector_util.asDict(listItem, resultList["timestamp"], source="file")
                             result.append(result_dict)
                     else:
-                        print("no results!")
+                        log.debug("no results!")
                 # print stats and emit result
                 if not self.restart:
                     elapsed = timer.elapsed()
@@ -103,7 +105,7 @@ class DetectorFileProcessThread(QThread):
                         elapsed /= 1000
                         unit = 's'
                     stats = f"Pass {curpass+1}/{NUM_PASSES}, max iterations: {max_iterations}, time: {elapsed}{unit}"
-                    print(stats)
+                    log.debug(stats)
                     if len(result) > 0:
                         self.detect_result.emit(json.dumps(result))
                     curpass += 1

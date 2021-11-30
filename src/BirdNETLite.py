@@ -16,12 +16,11 @@ import librosa
 import numpy as np
 import math
 import time
-import logging
-
+from AppLog import Log
+log = Log()
 from AppConfig import AppConfig
-
 config = AppConfig()
-log = logging.getLogger('my_logger')
+
 
 def loadModel():
 
@@ -30,7 +29,7 @@ def loadModel():
     global MDATA_INPUT_INDEX
     global CLASSES
 
-    log.debug('LOADING TF LITE MODEL...')
+    log.info('BirdNETLite().loadModel(), LOADING TF LITE MODEL...')
 
     # Load TFLite model and allocate tensors.
     interpreter = tflite.Interpreter(model_path = config.BASE_PATH + 'model/BirdNET_6K_GLOBAL_MODEL.tflite')
@@ -51,7 +50,7 @@ def loadModel():
         for line in lfile.readlines():
             CLASSES.append(line.replace('\n', ''))
 
-    log.debug('DONE!')
+    log.info('BirdNETLite().loadModel(), DONE!')
 
     return interpreter
 
@@ -91,7 +90,7 @@ def splitSignal(sig, rate, overlap, seconds=3.0, minlen=1.5):
 
 def readAudioData(path, overlap, sample_rate=48000):
 
-    log.debug('READING AUDIO DATA...')
+    log.debug('BirdNETLite().readAudioData()')
 
     # Open file with librosa (uses ffmpeg or libav)
     sig, rate = librosa.load(path, sr=sample_rate, mono=True, res_type='kaiser_fast')
@@ -99,7 +98,7 @@ def readAudioData(path, overlap, sample_rate=48000):
     # Split audio into 3-second chunks
     chunks = splitSignal(sig, rate, overlap)
 
-    log.debug(f'DONE! READ{str(len(chunks))}, CHUNKS.SAMPLE_RATE={rate}')
+    log.debug(f'BirdNETLite(), DONE! READ{str(len(chunks))}, CHUNKS.SAMPLE_RATE={rate}')
 
     return chunks
 
@@ -109,7 +108,7 @@ def prepareAudioSignal(sig, rate, overlap):
     # Split audio into 3-second chunks
     chunks = splitSignal(sig, rate, overlap)
     
-    log.debug(f'DONE! CHOPPING {str(len(chunks))} CHUNKS. SAMPLE_RATE={rate}')
+    log.debug(f'BirdNETLite(), DONE! CHOPPING {str(len(chunks))} CHUNKS. SAMPLE_RATE={rate}')
 
     return chunks
 
@@ -165,7 +164,7 @@ def analyzeAudioData(chunks, lat, lon, week, sensitivity, overlap, interpreter, 
     detections = {}
     start = time.time()
     
-    log.debug('ANALYZING AUDIO...')
+    log.debug('BirdNETLite(), analyzeAudioData()')
 
     # Convert and prepare metadata
     mdata = convertMetadata(np.array([lat, lon, week]))
@@ -192,13 +191,13 @@ def analyzeAudioData(chunks, lat, lon, week, sensitivity, overlap, interpreter, 
             progress = int(chunkCounter/numChunks*100)
             callbackProgress(progress)
 
-    log.debug(f'DONE! Time {int((time.time() - start) * 10) / 10.0} SECONDS')
+    log.debug(f'BirdNETLite(), DONE! Time {int((time.time() - start) * 10) / 10.0} SECONDS')
 
     return detections
 
 def writeResultsToFile(detections, min_conf, path):
 
-    print('WRITING RESULTS TO', path, '...', end=' ')
+    log.debug('BirdNETLite(), WRITING RESULTS TO', path, '...', end=' ')
     rcnt = 0
     with open(path, 'w') as rfile:
         rfile.write('Start (s);End (s);Scientific name;Common name;Confidence\n')
@@ -207,7 +206,7 @@ def writeResultsToFile(detections, min_conf, path):
                 if entry[1] >= min_conf and (entry[0] in WHITE_LIST or len(WHITE_LIST) == 0):
                     rfile.write(d + ';' + entry[0].replace('_', ';') + ';' + str(entry[1]) + '\n')
                     rcnt += 1
-    print('DONE! WROTE', rcnt, 'RESULTS.')
+    log.debug('BirdNETLite(), DONE! WROTE', rcnt, 'RESULTS.')
 
 
 def parseArgs(args):
@@ -253,8 +252,7 @@ def main():
     writeResultsToFile(detections, min_conf, args.o)
 
 # call main, writes results to file: result.csv
-sys.argv = ['--i', 'data/grinden_091122_edit.mp3', '--lat', '59.334591', '--lon', '-18.063240', '--week', '45']
-if __name__ == '__main__':
-    print("Running from main() is not activated!")
-    #main()
-    #loadModel()
+# sys.argv = ['--i', 'filename.mp3', '--lat', '59.334591', '--lon', '-18.063240', '--week', '45']
+# if __name__ == '__main__':
+#    log.debug("Running from main() is not activated!")
+#    main()

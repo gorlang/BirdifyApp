@@ -18,7 +18,6 @@ class ListWidgetSites(QListWidget):
         pass
 
     def text_changed(self, item):
-        print("item=", item)
         self._parent._site_name = item
         site = self._parent._sites.findByName(item)
         self._parent._site_url = site["url"].values[0]

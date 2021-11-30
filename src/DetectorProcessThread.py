@@ -3,8 +3,9 @@ from PySide6.QtCore import (QMetaType, Signal, QMutex, QElapsedTimer, QMutexLock
 from BirdifyAPI import detectSpecies, filterDetections, getNewArgMap
 from Decoder import Decoder
 import json
-
 from DetectorUtil import DetectorUtil
+from AppLog import Log
+log = Log()
 
 NUM_PASSES = 1
 DEFAULT_RESULT_SIZE = 10
@@ -15,7 +16,7 @@ class DetectorProcessThread(QThread):
 
     def __init__(self, parent):
         super().__init__()
-        print("DetectorProcessThread().__init__")
+        log.debug("DetectorProcessThread().__init__")
         self._parent = parent
         self._result_size = 10
         self.mutex = QMutex()
@@ -26,7 +27,7 @@ class DetectorProcessThread(QThread):
         self._detector_util = DetectorUtil(parent)
 
     def stop(self):
-        print("Thread().stop()")
+        log.debug("Thread().stop()")
         self.mutex.lock()
         self.abort = True
         self.condition.wakeOne()
@@ -49,7 +50,7 @@ class DetectorProcessThread(QThread):
 
     def run(self):
         timer = QElapsedTimer()
-        print("Thread().run()")
+        log.debug("Thread().run()")
         while True:
             self.mutex.lock()
             resultSize = self._result_size
@@ -90,7 +91,7 @@ class DetectorProcessThread(QThread):
                         elapsed /= 1000
                         unit = 's'
                     stats = f"Pass {curpass+1}/{NUM_PASSES}, max iterations: {max_iterations}, time: {elapsed}{unit}"
-                    print(stats)
+                    log.debug(stats)
                     if len(result) > 0:
                         self.detect_result.emit(json.dumps(result[0])) # return only first item
                     curpass += 1

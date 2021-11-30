@@ -2,7 +2,6 @@ class DetectorUtil():
     def __init__(self, parent):
         super().__init__()
         self._parent = parent
-        print("DetectorUtil().__init__")
 
     def asDict(self, item, ts, source="live"):
         time_slot = item[0].split(";")

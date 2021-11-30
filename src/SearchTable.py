@@ -70,11 +70,9 @@ class SearchTable(QTableView):
         #count = len(self._model._data)
         self._model._data = data
         self.rowCountChanged(0, len(data))
-        #print("new data=", data)
         return False
 
     def insertData(self, index, data, role):
-        print("insertData(), data=", data)
         new_data = data + self._model._data
         self.setData(index, new_data, role)
         return False

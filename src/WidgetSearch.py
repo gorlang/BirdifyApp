@@ -4,6 +4,8 @@ from PySide6.QtWidgets import QCheckBox, QPushButton, QVBoxLayout, QWidget
 import pandas as pd
 from BLabel import BLabel
 from SearchTable import SearchTable
+from AppLog import Log
+log = Log()
 
 class WidgetSearch(QWidget):
     def __init__(self, parent):
@@ -34,7 +36,7 @@ class WidgetSearch(QWidget):
         if len(stats) > 0:
             df_indata = {}
             colnames = list(stats[0])
-            print("colnames=", colnames)
+            log.debug(f"colnames={colnames}")
             for colname in colnames:
                 df_indata[colname] = []
             for row in stats:
@@ -53,16 +55,16 @@ class WidgetSearch(QWidget):
 
     def refreshList(self, i):
         self.checkListEvent(None)
-        print("refresh")
+        log.debug("refresh")
         
     def checkListEvent(self, i):
         if i != None:
             self.check_list = False if i == 0 else True
-        print("checked", i, self.check_list)
+        log.debug(f"checked, {i},{self.check_list}")
         if self.check_list:
             stats = self._parent._stats._detect_stats
             if self._parent._config.TEST:
-                print("TEST! stats=",stats)
+                log.debug(f"TEST! stats={stats}")
                 stats = [{"name_sv": "apa1", "name_en": "apa1e", "p": "0.25999"},{"name_sv": "apa1", "name_en": "apa1e", "p": "0.5"},{"name_sv": "apa2", "name_en": "apa2e", "p": "1"},{"name_sv": "apa3", "name_en": "apa3e", "p": "0.1"},{"name_sv": "apa3", "name_en": "apa3e", "p": "0.2"}]
             if len(stats) > 0:
                 df = self.asDataFrame(stats)
@@ -70,5 +72,5 @@ class WidgetSearch(QWidget):
                 self.filteredData = search_result
                 self.table.setData(0, self.filteredData, None)
             else:
-                print ("No searchresult!")
+                log.debug("No searchresult!")
 

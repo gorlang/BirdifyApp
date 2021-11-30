@@ -13,6 +13,6 @@ class BStackedWidget(QStackedWidget):
         self.addWidget(WidgetLibrary(parent))
         self.addWidget(WidgetSearch(parent))
         self.addWidget(WidgetLocation(parent))
-        self.addWidget(WidgetSettings(parent))
         self.addWidget(WidgetFiles(parent))
+        self.addWidget(WidgetSettings(parent))
         self.setCurrentIndex(0)

@@ -20,6 +20,8 @@ from Sites import Sites
 from Species import Species
 from Countries import Countries
 from Stats import Stats
+from AppLog import Log
+log = Log()
 
 if not AppConfig().isTest():
     from BirdNETLite import loadModel
@@ -29,8 +31,6 @@ else:
 class MainWindow(QMainWindow):
     def __init__(self, config, device_in, device_out, df_species, df_countries, df_sites):
         super().__init__()
-        print("MainWindow()")
-
         self._config = config
         self._device_in = device_in
         self._device_out = device_out
@@ -69,6 +69,8 @@ class MainWindow(QMainWindow):
         self.stacked = BStackedWidget(self)
         self.setCentralWidget(self.stacked)
 
+        log.info(f"BirdifyAppGUI().MainWindow(), app started, TEST={AppConfig().isTest()}")
+
     def updateQualityStats(self):
         self._stats.calcDetectQuality()
 
@@ -106,6 +108,7 @@ class MainWindow(QMainWindow):
     def closeEvent(self, event):
         self._audio_sources.stopAll()
         event.accept()
+        log.info("BirdifyAppGUI().closeEvent(), closing audio devices.")
 
     state_map = {
         QAudio.ActiveState: "ActiveState",
@@ -116,7 +119,7 @@ class MainWindow(QMainWindow):
     @Slot(QAudio.State)
     def handle_state_changed(self, state):
         state = self.state_map.get(state, 'Unknown')
-        qWarning(f"state = {state}")
+        log.debug(f"state = {state}")
 
     @Slot()
     def updateAmplitudeChart(self):
@@ -124,6 +127,8 @@ class MainWindow(QMainWindow):
 
 
 if __name__ == "__main__":
+
+    log.info("BirdifyAppGUI().__main__, starting app!")
     
     config = AppConfig()
 
@@ -140,6 +145,8 @@ if __name__ == "__main__":
     if output == None:
         QMessageBox.warning(None, "audio", f"No suitable OUTPUT device {config.DEVICE_NAMES_OUT} is avaialble. Connect it and restart.")
         sys.exit(-1)
+
+    log.info("BirdifyAppGUI(), loading data...")
 
     df_species = pd.read_csv(config.BASE_PATH + "data/species_list.csv")
     df_countries = pd.read_csv(config.BASE_PATH + "data/countries.csv")

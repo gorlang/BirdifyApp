@@ -32,4 +32,4 @@ class WidgetLocation(QWidget):
         if url != None and url != "":
             QDesktopServices.openUrl(QUrl(url, QUrl.TolerantMode))
         else:
-            print("No url!")
+            log.debug("No url!")

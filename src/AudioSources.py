@@ -1,14 +1,20 @@
 from PySide6.QtMultimedia import QAudioSink, QAudioSource
 from AudioFormats import AudioFormats
+from AppLog import Log
+log = Log()
 
 class AudioSources():
     def __init__(self, parent):
         super().__init__()
         self._parent = parent
 
+        self._audio_input_1 = None
+        self._audio_input_2 = None
+        self.m_audioSink = None
+        self._audio_input_3  = None
+
         self._io_device_1 = None
         self._io_device_2 = None
-        self.m_audioSink = None
         self._io_device_3 = None
 
     def connectAll(self):
@@ -25,7 +31,7 @@ class AudioSources():
         self._io_device_2 = self._audio_input_2.start()
         self.m_audioSink.start(self._io_device_2)
         self._io_device_3 = self._audio_input_3.start()
-        print("AudioSources().startAll()")
+        log.debug("AudioSources().startAll()")
        
     def stopAll(self):
         if self._audio_input_1 is not None:
@@ -36,7 +42,7 @@ class AudioSources():
             self._audio_input_3.stop()
         if self.m_audioSink is not None:
             self.m_audioSink.stop()
-        print("AudioSources().closeAll()")
+        log.debug("AudioSources().closeAll()")
 
     
 

@@ -4,6 +4,8 @@ from PySide6.QtWidgets import QCheckBox, QMessageBox, QVBoxLayout, QWidget
 from BLabel import BLabel
 from ListWidgetLangs import ListWidgetLangs
 from ListWidgetWeeks import ListWidgetWeeks
+from AppLog import Log
+log = Log()
 
 class WidgetSettings(QWidget):
     def __init__(self, parent):
@@ -11,7 +13,7 @@ class WidgetSettings(QWidget):
         layout = QVBoxLayout()
 
         self._parent = parent
-        self.msg = "Audio needs to be running to start detection!"
+        self.msg = "Audio needs to be enabled to start detection!"
 
         layout.addWidget(BLabel("Week", 14))
         layout.addWidget(ListWidgetWeeks(parent))
@@ -47,23 +49,22 @@ class WidgetSettings(QWidget):
 
     def toggleAudio(self, i):
         checked = False if i == 0 else True
-        print("toogleAudio(), checked=", checked)
+        log.debug(f"WidgetSettings().toogleAudio(), checked={checked}")
         audio_on = self._parent._app_controller._audio_on
         if not checked:
             if audio_on:
-                print("set audio off!")
+                log.debug("WidgetSettings() set audio off!")
                 self.disableDetectCheckBox()
                 self._parent._app_controller.stopDetection()
                 self.detectionStatus.setCheckState(QtCore.Qt.CheckState(False))
                 self._parent._app_controller.stopAudio()
         else:
             if not audio_on:
-                print("set audio on!")
+                log.debug("WidgetSettings() set audio on!")
                 self._parent._app_controller.startAudio()
                 self.disableDetectCheckBox(False)
                 #self._parent._app_controller.startDetection()
                 #self.detectionStatus.setCheckState(QtCore.Qt.CheckState(True))
-
 
     def disableDetectCheckBox(self, disableflag=True):
         self.detectionStatus.setDisabled(disableflag)
@@ -76,12 +77,12 @@ class WidgetSettings(QWidget):
 
         if checked:
             if not detection_on and audio_on:
-                print("start detection!")
+                log.debug("WidgetSettings(), start detection!")
                 self._parent._app_controller.startDetection()
             else:
                 QMessageBox.warning(None, "", self.msg)
                 self.detectionStatus.setCheckState(QtCore.Qt.CheckState(False))
         else:
             if detection_on:
-                print("stop detection!")
+                log.debug("WidgetSettings(), stop detection!")
                 self._parent._app_controller.stopDetection()

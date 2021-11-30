@@ -2,6 +2,8 @@ import json
 from PySide6.QtCore import QMetaType, Signal, Slot
 import random
 from BirdifyAPI import rankResult
+from AppLog import Log
+log = Log()
 
 #
 # MOCK Class for development
@@ -32,7 +34,7 @@ class DetectorMOCK():
             f_ranked_list = list(map(lambda x: x[3], ranked_list))
             #result = {"species_names": f_ranked_list, "detection_time": time}
             #self._parent._detect_stats.append(result)
-        print("DetectorMOCK().Detect()")
+        log.debug("DetectorMOCK().Detect()")
         result = {"mock": "mock"}
         #self.detect_result.emit(json.dumps(result))
 
@@ -47,4 +49,4 @@ class parentMOCK():
 #mock = parentMOCK()
 #dm = DetectorMOCK(mock)
 #dm.detect(10)
-#   print(mock._species_list)
+

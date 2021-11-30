@@ -6,6 +6,8 @@ from BLabel import BLabel
 from SearchTable import SearchTable
 from SpectogramWidget import SpectogramWidget
 from WidgetDragDropFile import WidgetDragDropFile
+from AppLog import Log
+log = Log()
 
 class WidgetFiles(QWidget):
     def __init__(self, parent):
@@ -134,7 +136,7 @@ class WidgetFiles(QWidget):
     def fileDropped(self, l):
         for url in l:
             if os.path.exists(url):
-                print(url)
+                log.debug(url)
                 filename = self.getUniqueFilename(url)
                 self._file_urls[filename] = url
                 self._selected_file_path = url
@@ -169,7 +171,7 @@ class WidgetFiles(QWidget):
             self.buttonSpectogram.setVisible(True)
 
     def analyzeFile(self, i):
-        print("analyzing, self._selected_file_path=", self._selected_file_path)
+        log.debug(f"WidgetFiles().analyzeFile(), file={self._selected_file_path}")
         if (self._selected_file_path != None):
             self.emptyResultTable()
             self._progress_value = 0
@@ -182,5 +184,4 @@ class WidgetFiles(QWidget):
 
     def updateResultTable(self, result_json):
         items = json.loads(result_json)
-        print("updateResultTable()")
         self.table.setData(0, items, None)
