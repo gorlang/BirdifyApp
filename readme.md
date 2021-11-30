@@ -59,7 +59,12 @@ Start the app by running the main module:
 $ ./env/bin/python src/BirdifyAppGUI.py
 ```
 
-Debug level (info or debug) is set in file src/app-config.cfg.
+Log level (info or debug) can be set in file src/app-config.cfg (section LOGGING).
+
+```bash
+[LOGGING]
+level = info
+```
 
 ## LICENSE
 
