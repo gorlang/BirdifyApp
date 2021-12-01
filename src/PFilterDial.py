@@ -6,6 +6,8 @@ class PFilterDial(QDial):
         self._parent = parent
         self.setRange(0, 100)
         self.setSingleStep(1)
+        self._text = self._parent._config.DIAL_FILTER_P
+        self._parent._label_filter_dial.setText(self._text + "=" + str(self._parent._filter_p))
 
         self.valueChanged.connect(self.value_changed)
         self.sliderMoved.connect(self.slider_position)
@@ -14,8 +16,8 @@ class PFilterDial(QDial):
 
     def value_changed(self, i):
         self._parent._filter_p = i/100
-        text = self._parent._config.DIAL_FILTER_P
-        self._parent._label_filter_dial.setText(text + "=" + str(i) + "%")
+        p_display = round(self._parent._filter_p, 2)
+        self._parent._label_filter_dial.setText(self._text + "=" + str(p_display))
 
     def slider_position(self, p):
         pass

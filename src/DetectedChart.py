@@ -19,18 +19,19 @@ class DetectedChart(QChart):
         self.zoom(1.5)
 
     def setSlices(self, rank_index):
-        index = rank_index[0][1]
-        for s in self._series.slices():
-            s.setPen(QPen(QColor(self._config.COLOR_BG), 0))
-        slice = self._series.slices()[index]
-        slice.setExploded()
-        slice.setPen(QPen(Qt.magenta, 3))
-        slice.setBrush(Qt.magenta)
-        for i, values in enumerate(rank_index):
-            if i < 2:
-                slice2 = self._series.slices()[values[1]]
-                slice2.setLabelVisible()
-                slice2.setLabelColor(QColor(self._config.COLOR_FONT))
+        if len(rank_index) > 0:
+            index = rank_index[0][1]
+            for s in self._series.slices():
+                s.setPen(QPen(QColor(self._config.COLOR_BG), 0))
+            slice = self._series.slices()[index]
+            slice.setExploded()
+            slice.setPen(QPen(Qt.magenta, 3))
+            slice.setBrush(Qt.magenta)
+            for i, values in enumerate(rank_index):
+                if i < 2:
+                    slice2 = self._series.slices()[values[1]]
+                    slice2.setLabelVisible()
+                    slice2.setLabelColor(QColor(self._config.COLOR_FONT))
 
 
     def update(self):

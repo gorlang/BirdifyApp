@@ -40,7 +40,7 @@ class MainWindow(QMainWindow):
         self._coords = self._countries.getCoords(self._country)
         self._current_week = getWeek()
         self._week = self._current_week
-        self._filter_p = 0.05
+        self._filter_p = 0.1
         self._footer_labels = []
         self._detect_counter = 0
         self._result_size = 10 # not used at the moment
@@ -78,16 +78,10 @@ class MainWindow(QMainWindow):
         footer_txt = f"{self._country}, w{self._week}, {coords}"
         self.updateFooterLabels(footer_txt)
 
-    def getTableRow(self, item, names=["p", "timeofday", "name_sv", "name_en", "name_sci", "p"]):
-        row_items = []
-        for key in names:
-            row_items.append(item[key])
-        return [" ".join(row_items)]
-
     def updateDetected(self, result_json):
         self._detect_counter += 1
         item = json.loads(result_json)
-        self._result_table.insertData(0, self.getTableRow(item), None)
+        self._result_table.insertData(0, [item], None)
         self._stats.addDetected(item)
         self._stats.calcMostFreq()
 

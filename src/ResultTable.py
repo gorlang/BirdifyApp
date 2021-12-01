@@ -24,18 +24,19 @@ class ResultTableModel(QAbstractTableModel):
             return int(0)
 
     def data(self, index, role=Qt.DisplayRole):
-        value = self._data[index.row()]
-        values = value.split(" ")
-        p_value = values[0]
-        float_p_value = self.tryFloat(p_value)
 
-        if role == Qt.DisplayRole:
-            if float_p_value > self._parent._filter_p:
-                return " ".join(values[1:])
+        row = self._data[index.row()]
+        if row != None and len(row) > 0:
+            float_p_value = self.tryFloat(row["p"])
+            lang = self._parent._lang
 
-        if role == Qt.DecorationRole:
-            if float_p_value > self._parent._filter_p:
-                return QtGui.QColor(self.getColor(float_p_value))
+            if role == Qt.DisplayRole:
+                if float_p_value > self._parent._filter_p:
+                    return  " ".join([row["timeofday"], row["name_" + lang] + "/" + row["name_sci"], row["p"]])
+
+            if role == Qt.DecorationRole:
+                if float_p_value > self._parent._filter_p:
+                    return QtGui.QColor(self.getColor(float_p_value))
 
 class ResultTable(QTableView):
     def __init__(self, parent, data):
@@ -48,10 +49,20 @@ class ResultTable(QTableView):
         self.horizontalHeader().hide()
         self.verticalHeader().hide()
 
+    def hideRows(self):
+        for i, data in enumerate(self._model._data):
+            if data != None and len(data) > 0:
+                p = self._model.tryFloat(data["p"])
+                if p < self._parent._filter_p:
+                    self.setRowHidden(i, True)
+                else:
+                    self.setRowHidden(i, False)
+
     def setData(self, index, data, role):
         count = len(self._model._data)
         self._model._data = data
         self.rowCountChanged(count, count + len(data))
+        self.hideRows()
         return False
 
     def insertData(self, index, data, role):

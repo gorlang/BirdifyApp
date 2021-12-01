@@ -12,8 +12,7 @@ class WidgetLibrary(QWidget):
         layout.addWidget(BLabel(parent._config.BUTTON_LIBRARY, 14))
         layout.addWidget(parent._result_table)
 
-        filter_p_value = str(int(parent._filter_p * 100))
-        parent._label_filter_dial = BLabel(parent._config.DIAL_FILTER_P + "=" + filter_p_value, 14)
+        parent._label_filter_dial = BLabel(parent._config.DIAL_FILTER_P + "=" + str(parent._filter_p), 14)
         layout.addWidget(parent._label_filter_dial)
         layout.addWidget(PFilterDial(parent))
         
