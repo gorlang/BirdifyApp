@@ -16,8 +16,8 @@ class AppConfig():
         fc = FileConfig()
         self.THEME = fc.THEME["theme"]
         self.BASE_PATH = "src/"
-        self.DEVICE_NAMES_OUT = [fc.AUDIO["output_primary"], fc.AUDIO["output_fallback"]] # from cfg file
-        self.DEVICE_NAMES_IN = [fc.AUDIO["input"]] # from cfg file
+        self.DEVICE_NAMES_OUT = [fc.AUDIO["output_primary"], fc.AUDIO["output_fallback"]]
+        self.DEVICE_NAMES_IN = [fc.AUDIO["input"]]
         self.FONT = 'Arial'
         self.WINDOW_SIZE_SCALE = 0.5 # scaled factor to available win height
         self.AUDIO_FILE_TYPES = ["mp3", "wav"]

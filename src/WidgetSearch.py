@@ -1,6 +1,6 @@
 import json
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QCheckBox, QPushButton, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QComboBox, QPushButton, QVBoxLayout, QWidget
 import pandas as pd
 from BLabel import BLabel
 from SearchTable import SearchTable
@@ -12,16 +12,16 @@ class WidgetSearch(QWidget):
         super().__init__()
 
         self._parent = parent
-        self.check_list = True
-        self.filteredData = [{"name_sv": "hej1", "p": "0.5", "name_en": "hello"}]
+        self.select_options = ["Show Check List", "Show Top List"]
+        self.selected_list = self.select_options[0]
         
         layout = QVBoxLayout()
         layout.addWidget(BLabel(parent._config.BUTTON_SEARCH, 14))
 
-        checkList = QCheckBox("Show Check List")
-        checkList.setCheckState(Qt.Unchecked)
-        checkList.stateChanged.connect(self.checkListEvent)
-        layout.addWidget(checkList)
+        self.selectList = QComboBox()
+        self.selectList.addItems(self.select_options)
+        self.selectList.currentTextChanged.connect(self.selectListEvent)
+        layout.addWidget(self.selectList)
 
         button = QPushButton("Refresh List")
         button.clicked.connect(self.refreshList)
@@ -42,35 +42,36 @@ class WidgetSearch(QWidget):
             for row in stats:
                 for col in colnames:
                     df_indata[col].append(row[col])
-            return pd.DataFrame(data=df_indata)
+            df = pd.DataFrame(data=df_indata)
+            df['p'] = df['p'].astype(float)
+            return df
         return None
 
-    def getCheckList(self, df):
-        df['p'] = df['p'].astype(float)
-        lang = self._parent._lang
-        df_result = df.groupby(["name_" + lang]).mean("p").sort_values(["p"], ascending=False)
-        json_result = df_result.to_json(orient="table")
-        data = json.loads(json_result)["data"]
-        return data
+    def dfToJson(self, df):
+        json_result = df.to_json(orient="table")
+        return json.loads(json_result)["data"]
 
-    def refreshList(self, i):
-        self.checkListEvent(None)
-        log.debug("refresh")
+    def getCheckList(self, df, lang):
+        df_result = df.groupby(["name_" + lang]).mean("p").sort_values(["p"], ascending=False)
+        return self.dfToJson(df_result)
         
-    def checkListEvent(self, i):
-        if i != None:
-            self.check_list = False if i == 0 else True
-        log.debug(f"checked, {i},{self.check_list}")
-        if self.check_list:
-            stats = self._parent._stats._detect_stats
-            if self._parent._config.TEST:
-                log.debug(f"TEST! stats={stats}")
-                stats = [{"name_sv": "apa1", "name_en": "apa1e", "p": "0.25999"},{"name_sv": "apa1", "name_en": "apa1e", "p": "0.5"},{"name_sv": "apa2", "name_en": "apa2e", "p": "1"},{"name_sv": "apa3", "name_en": "apa3e", "p": "0.1"},{"name_sv": "apa3", "name_en": "apa3e", "p": "0.2"}]
-            if len(stats) > 0:
-                df = self.asDataFrame(stats)
-                search_result = self.getCheckList(df)
-                self.filteredData = search_result
-                self.table.setData(0, self.filteredData, None)
-            else:
-                log.debug("No searchresult!")
+    def getTopList(self, df, lang):
+        df_result = df.groupby(["name_" + lang]).max("p").sort_values(["p"], ascending=False)
+        return self.dfToJson(df_result)
+ 
+    def refreshList(self): 
+        self.selectListEvent(self.selected_list)
+        
+    def selectListEvent(self, selected_item):
+        self.selected_list = selected_item
+        stats = self._parent._stats._detect_stats
+        if len(stats) > 0:
+            df = self.asDataFrame(stats)
+            lang = self._parent._lang
+            if self.selected_list == self.select_options[0]:
+                self.table.setData(0, self.getCheckList(df, lang), None)
+            elif self.selected_list == self.select_options[1]:
+                self.table.setData(0, self.getTopList(df, lang), None)
+        else:
+            log.debug("No stats available!")
 
