@@ -11,11 +11,12 @@ class WidgetLocation(QWidget):
         self._parent = parent
         layout = QVBoxLayout()
 
+        self.listWidgetCountries = ListWidgetCountries(parent)
         layout.addWidget(BLabel("Country", 14))
-        layout.addWidget(ListWidgetCountries(parent))
+        layout.addWidget(self.listWidgetCountries)
 
         layout.addWidget(BLabel("Site", 14))
-        layout.addWidget(ListWidgetSites(parent))
+        layout.addWidget(ListWidgetSites(self, parent))
 
         button = QPushButton("Open Nature Live Stream in External Web-Browser")
         button.clicked.connect(self.openSite)
@@ -31,5 +32,3 @@ class WidgetLocation(QWidget):
         url = self._parent._site_url
         if url != None and url != "":
             QDesktopServices.openUrl(QUrl(url, QUrl.TolerantMode))
-        else:
-            log.debug("No url!")

@@ -33,7 +33,7 @@ class MainWindow(QMainWindow):
         self._countries = Countries(df_countries)
         self._sites = Sites(df_sites)
         self._stats = Stats(self)
-        self._country = "Sweden"
+        self._country = "Denmark"
         self._site_name = "Morten Hilmer Backyard Nature Cam"
         self._site_url = "https://www.youtube.com/watch?v=qQZILMyW88o"
         self._lang = "sv"
