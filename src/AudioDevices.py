@@ -31,6 +31,7 @@ class AudioDevices():
         devices = []
         for i, output_device in enumerate(self._output_devices):
             devices.append({"name": output_device.description(), "id": i, "type": "out"})
+            log.info(f"getDevicesOut(), output_device={output_device.description()}")
         return devices
 
     def getDevicesIn(self):
@@ -53,7 +54,7 @@ class AudioDevices():
 
     def getExistingDeviceOut(self):
         for d in self.priorityDevicesOut:
-            log.debug(f"AudioDevices.getExistingDeviceOut()={d}")
+            log.info(f"AudioDevices.getExistingDeviceOut()={d}")
             result = list(filter(lambda x: x["name"] == d, self.getDevicesOut()))
             if (len(result) > 0):
                 break
@@ -64,7 +65,7 @@ class AudioDevices():
 
     def getExistingDeviceIn(self):
         for d in self.priorityDevicesIn:
-            log.debug(f"AudioDevices.getExistingDeviceIn()={d}")
+            log.info(f"AudioDevices.getExistingDeviceIn()={d}")
             result = list(filter(lambda x: x["name"] == d, self.getDevicesIn()))
             if (len(result) > 0):
                 break

@@ -23,18 +23,12 @@ from Stats import Stats
 from AppLog import Log
 log = Log()
 
-if not AppConfig().isTest():
-    from BirdNETLite import loadModel
-else:
-    from BirdNETLiteMOCK import loadModel
-
 class MainWindow(QMainWindow):
     def __init__(self, config, device_in, device_out, df_species, df_countries, df_sites):
         super().__init__()
         self._config = config
         self._device_in = device_in
         self._device_out = device_out
-        self._tflite_model = loadModel()
         self._species = Species(df_species)
         self._countries = Countries(df_countries)
         self._sites = Sites(df_sites)

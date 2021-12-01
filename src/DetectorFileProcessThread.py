@@ -1,12 +1,17 @@
 import librosa
 from PySide6.QtCore import (QMetaType, Signal, QMutex, QElapsedTimer, QMutexLocker, QThread, QWaitCondition)
-from BirdNETLite import loadModel
+from AppConfig import AppConfig
 from BirdifyAPI import detectSpecies, filterDetections, getNewArgMap
 from Decoder import Decoder
 import json
 from DetectorUtil import DetectorUtil
 from AppLog import Log
 log = Log()
+
+if not AppConfig().isTest():
+    from BirdNETLite import loadModel
+else:
+    from BirdNETLiteMOCK import loadModel
 
 NUM_PASSES = 1
 DEFAULT_RESULT_SIZE = 10

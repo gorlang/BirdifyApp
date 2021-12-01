@@ -1,11 +1,17 @@
 import librosa
 from PySide6.QtCore import (QMetaType, Signal, QMutex, QElapsedTimer, QMutexLocker, QThread, QWaitCondition)
+from AppConfig import AppConfig
 from BirdifyAPI import detectSpecies, filterDetections, getNewArgMap
 from Decoder import Decoder
 import json
 from DetectorUtil import DetectorUtil
 from AppLog import Log
 log = Log()
+
+if not AppConfig().isTest():
+    from BirdNETLite import loadModel
+else:
+    from BirdNETLiteMOCK import loadModel
 
 NUM_PASSES = 1
 DEFAULT_RESULT_SIZE = 10
@@ -25,6 +31,7 @@ class DetectorProcessThread(QThread):
         self.abort = False
         self._decoder = Decoder()
         self._detector_util = DetectorUtil(parent)
+        self._tflite_model = loadModel()
 
     def stop(self):
         log.debug("Thread().stop()")
@@ -74,7 +81,7 @@ class DetectorProcessThread(QThread):
                         mono_signal, 
                         parent._config.SAMPLE_RATE_DETECT,
                         getNewArgMap(parent._coords[0], parent._coords[1], parent._week),
-                        parent._tflite_model), 
+                        self._tflite_model), 
                         p_limit = parent._config.P_DEFAULT)
                     filteredList = resultList["filtered_list"]
                     if (len(filteredList) > 0):
