@@ -33,10 +33,10 @@ class MainWindow(QMainWindow):
         self._countries = Countries(df_countries)
         self._sites = Sites(df_sites)
         self._stats = Stats(self)
-        self._country = "Denmark"
-        self._site_name = "Morten Hilmer Backyard Nature Cam"
-        self._site_url = "https://www.youtube.com/watch?v=qQZILMyW88o"
-        self._lang = "sv"
+        self._country = "South Africa"
+        self._site_name = "Africam Tembe Elephant Park"
+        self._site_url = "https://www.youtube.com/watch?v=2bV6sJFixFI"
+        self._lang = "en"
         self._coords = self._countries.getCoords(self._country)
         self._current_week = getWeek()
         self._week = self._current_week
