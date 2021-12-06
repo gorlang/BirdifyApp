@@ -4,6 +4,7 @@ from PySide6.QtWidgets import QComboBox, QPushButton, QVBoxLayout, QWidget
 import pandas as pd
 from BLabel import BLabel
 from SearchTable import SearchTable
+from WidgetUtil import asDataFrame, dfToJson
 from AppLog import Log
 log = Log()
 
@@ -32,32 +33,13 @@ class WidgetSearch(QWidget):
 
         self.setLayout(layout)
 
-    def asDataFrame(self, stats):
-        if len(stats) > 0:
-            df_indata = {}
-            colnames = list(stats[0])
-            log.debug(f"colnames={colnames}")
-            for colname in colnames:
-                df_indata[colname] = []
-            for row in stats:
-                for col in colnames:
-                    df_indata[col].append(row[col])
-            df = pd.DataFrame(data=df_indata)
-            df['p'] = df['p'].astype(float)
-            return df
-        return None
-
-    def dfToJson(self, df):
-        json_result = df.to_json(orient="table")
-        return json.loads(json_result)["data"]
-
     def getCheckList(self, df, lang):
         df_result = df.groupby(["name_" + lang]).mean("p").sort_values(["p"], ascending=False)
-        return self.dfToJson(df_result)
+        return dfToJson(df_result)
         
     def getTopList(self, df, lang):
         df_result = df.groupby(["name_" + lang]).max("p").sort_values(["p"], ascending=False)
-        return self.dfToJson(df_result)
+        return dfToJson(df_result)
  
     def refreshList(self): 
         self.selectListEvent(self.selected_list)
@@ -66,7 +48,7 @@ class WidgetSearch(QWidget):
         self.selected_list = selected_item
         stats = self._parent._stats._detect_stats
         if len(stats) > 0:
-            df = self.asDataFrame(stats)
+            df = asDataFrame(stats)
             lang = self._parent._lang
             if self.selected_list == self.select_options[0]:
                 self.table.setData(0, self.getCheckList(df, lang), None)

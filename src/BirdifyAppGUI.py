@@ -10,6 +10,7 @@ from AppConfig import AppConfig
 from AppController import AppController
 from AudioBuffer import AudioBuffer
 from AudioDevices import AudioDevices
+from BLabel import BLabel
 from BStackedWidget import BStackedWidget
 from BToolBar import BToolBar
 from BTheme import BTheme
@@ -42,6 +43,7 @@ class MainWindow(QMainWindow):
         self._week = self._current_week
         self._filter_p = 0.1
         self._footer_labels = []
+        self._share_labels = []
         self._detect_counter = 0
         self._result_size = 10 # not used at the moment
 
@@ -71,6 +73,9 @@ class MainWindow(QMainWindow):
     def updateFooterLabels(self, txt):
         for label in self._footer_labels:
             label.setText(txt)
+        values = [self._site_name]
+        for i, label in enumerate(self._share_labels):
+            label.setText(values[i])
 
     def updateSettings(self):
         self._coords = self._countries.getCoords(self._country)
@@ -131,9 +136,13 @@ if __name__ == "__main__":
         sys.exit(-1)
     
     output = AudioDevices(config).getExistingDeviceOut()
+    output_name = output.description()
     if output == None:
         QMessageBox.warning(None, "audio", f"No suitable OUTPUT device {config.DEVICE_NAMES_OUT} is avaialble. Connect it and restart.")
         sys.exit(-1)
+    elif output_name == 'Built-in Output':
+        QMessageBox.information(None, "audio", f"Selected ouput is {output_name}. Verify that headphones are connected!")
+      
 
     log.info("BirdifyAppGUI(), loading data...")
 

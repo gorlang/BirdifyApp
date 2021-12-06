@@ -1,10 +1,10 @@
 PENDING
 
 1 Add more tests
-2 interactive selection of prio in/out devices, save selection to config file.
+2 interactive selection of prio in/out devices, save selection to config file?
 3 user should be able to get alerts on selected species that is detected
 4 filter away/set black list species/omit faulty detections due to noise
-5 Export lists/results to file or email/share etc.?
+5 Export/Publish lists/results to file or email/share etc.?
 6 links from species names in lists with search-url to xeno-canto web-site
 7 make detect in file and spectogram plot threaded (to avoid current small delay)
 .

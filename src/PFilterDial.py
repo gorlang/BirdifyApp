@@ -1,13 +1,22 @@
 from PySide6.QtWidgets import QDial
 
 class PFilterDial(QDial):
-    def __init__(self, parent):
+    def __init__(self, parent, parent_widget):
         super().__init__()
+
         self._parent = parent
+        self._parent_widget = parent_widget
+
+        self._text = self._parent._config.DIAL_FILTER_P
+
+        # differentiate behavior
+        self._p_widget = True if self._parent_widget._filter_p != None else False
+
+        p_filter = self._parent_widget._filter_p if self._p_widget else self._parent._filter_p
+        parent_widget._label_filter_dial.setText(self._text + "=" + str(p_filter))
+
         self.setRange(0, 100)
         self.setSingleStep(1)
-        self._text = self._parent._config.DIAL_FILTER_P
-        self._parent._label_filter_dial.setText(self._text + "=" + str(self._parent._filter_p))
 
         self.valueChanged.connect(self.value_changed)
         self.sliderMoved.connect(self.slider_position)
@@ -15,9 +24,13 @@ class PFilterDial(QDial):
         self.sliderReleased.connect(self.slider_released)
 
     def value_changed(self, i):
-        self._parent._filter_p = i/100
-        p_display = round(self._parent._filter_p, 2)
-        self._parent._label_filter_dial.setText(self._text + "=" + str(p_display))
+        p_filter = i/100
+        if self._p_widget:
+            self._parent_widget._filter_p = p_filter
+        else:
+            self._parent._filter_p = p_filter
+        p_display = round(p_filter, 2)
+        self._parent_widget._label_filter_dial.setText(self._text + "=" + str(p_display))
 
     def slider_position(self, p):
         pass
