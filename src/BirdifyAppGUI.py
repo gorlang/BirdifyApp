@@ -90,6 +90,11 @@ class MainWindow(QMainWindow):
         self._stats.addDetected(item)
         self._stats.calcMostFreq()
 
+    def clearDetected(self):
+        self._stats.clearDetected()
+        self._result_table.setData(0, [], None)
+        log.info("Detected cleared!")
+
     @Slot()
     def detect(self):
         self._detector.detect(self._result_size)

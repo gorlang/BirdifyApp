@@ -56,4 +56,5 @@ class WidgetSearch(QWidget):
                 self.table.setData(0, self.getTopList(df, lang), None)
         else:
             log.debug("No stats available!")
+            self.table.setData(0, [], None)
 

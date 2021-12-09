@@ -1,18 +1,23 @@
 PENDING
 
-1 Add more tests
-2 interactive selection of prio in/out devices, save selection to config file?
-3 user should be able to get alerts on selected species that is detected
-4 filter away/set black list species/omit faulty detections due to noise
-5 Export/Publish lists/results to file or email/share etc.?
-6 links from species names in lists with search-url to xeno-canto web-site
-7 make detect in file and spectogram plot threaded (to avoid current small delay)
+1 Clear detected list (and stats?, resets anyway) when changing location, ask first!
+2 'Share' screen: be able to pick in list what species to upload to website
+3 'Share' screen: Remember species that have been uploaded, gray out, and check if already uploaded this session.
+4 Add more tests
+5 interactive selection of prio in/out devices, save selection to config file?
+6 user should be able to get alerts on selected species that is detected
+7 filter away/set black list species/omit faulty detections due to noise
+8 links from species names in lists with search-url to xeno-canto web-site
+9 make detect in file and spectogram plot threaded (to avoid current small delay)
 .
 .
 99 docker image for ubuntu with working sound, if it's even possible, some tips here:
     https://stackoverflow.com/questions/41083436/how-to-play-sound-in-a-docker-container-on-mac-os-yosemite
 
-DONE 
+DONE
+x Manual reset/emtpy of detected list.
+x fix for ' chars in json on REST backend
+x Export/share species/list to website.
 x when selecting site, update the country list widget as well
 x add new list in search/lists showing species with highest p-values (not the average like the current shows)
 x added new theme

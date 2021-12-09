@@ -17,6 +17,7 @@ class PFilterDial(QDial):
 
         self.setRange(0, 100)
         self.setSingleStep(1)
+        self.setValue(int(p_filter * 100))
 
         self.valueChanged.connect(self.value_changed)
         self.sliderMoved.connect(self.slider_position)

@@ -16,6 +16,9 @@ class Stats():
     def addDetected(self, item):
         self._detect_stats.append(item)
 
+    def clearDetected(self):
+        self._detect_stats = []
+
     def calcMostFreq(self):
         parent = self._parent
         if len(self._detect_stats) > 0:

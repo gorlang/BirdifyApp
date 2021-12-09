@@ -8,7 +8,6 @@ from AppLog import Log
 from BLabel import BLabel
 from PFilterDial import PFilterDial
 from SearchTable import SearchTable
-from WidgetSearch import WidgetSearch
 from WidgetUtil import asDataFrame, dfToJson
 from AppLog import Log
 log = Log()
@@ -22,8 +21,9 @@ class WidgetShare(QWidget):
 
         self._filter_p = 0.5 # if has value => use this ref in PFilterDial()
 
+        # for test
         #ts = dt.now().strftime("%Y-%m-%d %H:%M:%S")
-        #self._parent._stats._detect_stats = [{"timestamp": ts, "p": 0.3, "name_sv": "talgoxe", "name_en": "taalgoxe"}, {"timestamp": ts, "p": 0.5, "name_sv": "bofink", "name_en": "booofink"}, {"timestamp": ts, "p": 1, "name_sv": "bofink", "name_en": "booofink"}]
+        #self._parent._stats._detect_stats = [{"timestamp": ts, "p": 0.3, "name_sv": "Baratt's warbler", "name_en": "Baratt's warbler"}, {"timestamp": ts, "p": 0.5, "name_sv": "bofink", "name_en": "booofink"}, {"timestamp": ts, "p": 1, "name_sv": "bofink", "name_en": "booofink"}]
       
         layout = QVBoxLayout()
 
@@ -73,6 +73,8 @@ class WidgetShare(QWidget):
             self._json_data = self.getTopList(df, self._parent._lang)
             self.table.setData(0, self._json_data, None)
             log.debug(f"self._json_data={self._json_data}")
+        else:
+            self.table.setData(0, [], None)
 
     def getQueryUrl(self, baseUrl, site_name, site_url, country):
         json_out = []
