@@ -23,7 +23,7 @@ class WidgetShare(QWidget):
 
         # for test
         #ts = dt.now().strftime("%Y-%m-%d %H:%M:%S")
-        #self._parent._stats._detect_stats = [{"timestamp": ts, "p": 0.3, "name_sv": "Baratt's warbler", "name_en": "Baratt's warbler"}, {"timestamp": ts, "p": 0.5, "name_sv": "bofink", "name_en": "booofink"}, {"timestamp": ts, "p": 1, "name_sv": "bofink", "name_en": "booofink"}]
+        #self._parent._stats._detect_stats = [{"timestamp": ts, "p": 0.3, "name_sci":"sciname1", "name_sv": "Baratt's warbler", "name_en": "Baratt's warbler"}, {"timestamp": ts, "p": 0.5, "name_sci":"sciname2", "name_sv": "bofink", "name_en": "booofink"}, {"timestamp": ts, "p": 1, "name_sci":"sciname2", "name_sv": "bofink", "name_en": "booofink"}]
       
         layout = QVBoxLayout()
 
@@ -62,7 +62,8 @@ class WidgetShare(QWidget):
         self.updateList()
 
     def getTopList(self, df, lang):
-        df_result = df.groupby(["name_" + lang]).max("p").sort_values(["p"], ascending=False)
+        col_names = list(map(lambda x: "name_" + x, self._parent._config.LANGS))
+        df_result = df.groupby(col_names).max("p").sort_values(["p"], ascending=False)
         df_result = df_result[df_result["p"] > self._filter_p]
         return dfToJson(df_result)
 
