@@ -12,6 +12,7 @@ class FileConfig():
 class AppConfig():
     def __init__(self):
         self.TEST = False
+        self.VERSION = "0.5.0"
         self.APP_NAME = "Birdify!"
         self.BIRDIFY_WEB_URL = "https://knutas.com/birdify/build/"
         fc = FileConfig()
@@ -65,8 +66,9 @@ class AppConfig():
         self.BUTTON_LOCATION = "Location"
         self.BUTTON_IMPORT = "Files"
         self.BUTTON_SHARE = "Share"
+        self.BUTTON_ABOUT = "About"
         self.DIAL_FILTER_P = "Filter P"
-        self.BUTTONS = [self.BUTTON_HOME, self.BUTTON_LIBRARY, self.BUTTON_SEARCH, self.BUTTON_LOCATION, self.BUTTON_SHARE, self.BUTTON_IMPORT, self.BUTTON_SETTINGS]
+        self.BUTTONS = [self.BUTTON_HOME, self.BUTTON_LIBRARY, self.BUTTON_SEARCH, self.BUTTON_LOCATION, self.BUTTON_SHARE, self.BUTTON_IMPORT, self.BUTTON_SETTINGS, self.BUTTON_ABOUT]
         self.DATA_COLS = ['Species', 'Quality', 'Time', 'Date', 'Country', 'Lat', 'Lon']
         self.COLOR_SCALE = ['#ff0000', '#ffa500', '#ffff00', '#008000','#008000']
         self.QUALITY_LEVELS = ["Low", "Average", "Good", "Excellent"]
@@ -78,7 +80,8 @@ class AppConfig():
                 self.BUTTON_LOCATION: "map.png",
                 self.BUTTON_SHARE: "share-balloon.png",
                 self.BUTTON_SETTINGS: "gear.png",
-                self.BUTTON_IMPORT: "application-import.png"
+                self.BUTTON_IMPORT: "application-import.png",
+                self.BUTTON_ABOUT: "information-italic.png"
                 }
         
         self.ICONS_DARK = {
@@ -88,7 +91,8 @@ class AppConfig():
                 self.BUTTON_LOCATION: "free-circle-icon-6-2-5-1.png",
                 self.BUTTON_SHARE: "free-circle-icon-6-2-3-1.png",
                 self.BUTTON_SETTINGS: "free-circle-icon-6-2-1-6.png",
-                self.BUTTON_IMPORT: "free-circle-icon-6-2-4-0.png"
+                self.BUTTON_IMPORT: "free-circle-icon-6-2-4-0.png",
+                self.BUTTON_ABOUT: "free-circle-icon-6-2-4-6.png"
                 }
 
         if self.THEME == "DARK":

@@ -1,12 +1,22 @@
-country,name,url
-Namibia,Explore Africa,https://www.youtube.com/watch?v=sqAdEAH2q_g
-Denmark,Morten Hilmer Backyard Nature Cam,https://www.youtube.com/watch?v=qQZILMyW88o
-South Africa,Africam Tau,https://www.youtube.com/watch?v=sqAdEAH2q_g
-United Kingdom,Videos for Cats,https://www.youtube.com/watch?v=S7dSux2uhvo
-South Africa,Africam Lessor Flamingos at Kamfers Dam,https://www.youtube.com/watch?v=3MlJEXOZTfo
-South Africa,Africam Rosies Pan,https://www.youtube.com/watch?v=TL0weAv8C9s
-United States,Mississippi River Flyway Cam,https://www.youtube.com/watch?v=DH0VmRsj05c
-United States,Sacramento National Wildlife Refuge,https://www.youtube.com/watch?v=DB4LDyWHawY
-United States,Captiva Osprey Cam Florida,https://www.youtube.com/watch?v=ZLelYERK4Jg
-South Africa,Africam Tembe Elephant Park,https://www.youtube.com/watch?v=2bV6sJFixFI
-South Africa,Allen Birdcam,https://www.youtube.com/watch?v=ODmAV8oHFhg
+type,country,name,url
+stream,Denmark,Morten Hilmer Backyard Nature Cam,https://www.youtube.com/watch?v=qQZILMyW88o
+stream,Botswana,Africam Tau SA/Botswana,https://www.youtube.com/watch?v=sqAdEAH2q_g
+video,United Kingdom,Videos for Cats,https://www.youtube.com/watch?v=S7dSux2uhvo
+stream,South Africa,Africam Lessor Flamingos at Kamfers Dam,https://www.youtube.com/watch?v=3MlJEXOZTfo
+stream,South Africa,Africam Rosies Pan,https://www.youtube.com/watch?v=TL0weAv8C9s
+stream,United States,Mississippi River Flyway Cam,https://www.youtube.com/watch?v=DH0VmRsj05c
+stream,United States,Sacramento National Wildlife Refuge,https://www.youtube.com/watch?v=DB4LDyWHawY
+stream,United States,Captiva Osprey Cam Florida,https://www.youtube.com/watch?v=ZLelYERK4Jg
+stream,South Africa,Africam Tembe Elephant Park,https://www.youtube.com/watch?v=1wMxsywzmTk
+stream,South Africa,Allen Birdcam,https://www.youtube.com/watch?v=ODmAV8oHFhg
+stream,South Africa,Africam Cat Eye,https://www.youtube.com/watch?v=35sMu9YEq6Y
+video,United States,HAWAII BIRDS Great Escapes,https://www.youtube.com/watch?v=t-KtNwp5V9c
+video,United States,Maui Island Hawaii Nature Soundscapes,https://www.youtube.com/watch?v=hVIVPB67-t0
+video,Bulgaria,Central Balkan National Park Bulgaria,https://www.youtube.com/watch?v=XxP8kxUn5bc
+video,Russia,Vladimir Region Russia,https://www.youtube.com/watch?v=fQitv3aCz2E
+video,Russia,Losiny Ostrov Park Moskva,https://www.youtube.com/watch?v=t5Tb_9mxlbE
+video,Russia,Sochi Kaukasus Russia,https://www.youtube.com/watch?v=M0AWBnAv8VE
+video,Canada,Birder King,https://www.youtube.com/watch?v=b_xKQ20jnQA
+video,New Zealand,Nature Sounds YouOriginal,https://www.youtube.com/watch?v=j1yAj11-8g8
+video,New Zealand,New Zealand Birdsong 1,https://www.youtube.com/watch?v=MjBXGMvPBIE
+video,New Zealand,New Zealand Birdsong 2,https://www.youtube.com/watch?v=E52G8KuLWzY

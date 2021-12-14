@@ -1,20 +1,21 @@
 PENDING
-
 1 Clear detected list (and stats?, resets anyway) when changing location, ask first!
-2 'Share' screen: be able to pick in list what species to upload to website
+2 'Share' screen: be able to pick/skip species in list to upload/share
 3 'Share' screen: Remember species that have been uploaded, gray out, and check if already uploaded this session.
 4 Add more tests
 5 interactive selection of prio in/out devices, save selection to config file?
 6 user should be able to get alerts on selected species that is detected
 7 filter away/set black list species/omit faulty detections due to noise
 8 links from species names in lists with search-url to xeno-canto web-site
-9 make detect in file and spectogram plot threaded (to avoid current small delay)
+9 make detect in files and spectogram plot threaded (to avoid current small delay)
 .
 .
 99 docker image for ubuntu with working sound, if it's even possible, some tips here:
     https://stackoverflow.com/questions/41083436/how-to-play-sound-in-a-docker-container-on-mac-os-yosemite
 
 DONE
+x append all langs when sharing list to web app
+x added about screen and logo
 x Manual reset/emtpy of detected list.
 x fix for ' chars in json on REST backend
 x Export/share species/list to website.

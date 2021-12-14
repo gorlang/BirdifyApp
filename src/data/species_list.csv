@@ -11,7 +11,7 @@
 9,Apteryx rowi,Okarito Kiwi,okaritokivi
 10,Apteryx owenii,Little Spotted Kiwi,mindre fläckkivi
 11,Apteryx haastii,Great Spotted Kiwi,större fläckkivi
-12,Casuariidae,"Cassowaries, Emu",Kasuarer
+12,Casuariidae,Cassowaries/Emu,Kasuarer
 13,Casuarius casuarius,Southern Cassowary,hjälmkasuar
 14,Casuarius bennetti,Dwarf Cassowary,dvärgkasuar
 15,Casuarius unappendiculatus,Northern Cassowary,enflikig kasuar
@@ -69,7 +69,7 @@
 67,Chauna torquata,Southern Screamer,tofsvärnfågel
 68,Anseranatidae,Magpie Goose,Skatgäss
 69,Anseranas semipalmata,Magpie Goose,skatgås
-70,Anatidae,"Ducks, Geese, Swans",Änder
+70,Anatidae,Ducks/Geese/Swans,Änder
 71,Dendrocygna viduata,White-faced Whistling Duck,vithuvad visseland
 72,Dendrocygna autumnalis,Black-bellied Whistling Duck,svartbukig visseland
 73,Dendrocygna guttata,Spotted Whistling Duck,fläckig visseland
@@ -266,7 +266,7 @@
 264,Megapodius layardi,Vanuatu Megapode,vanuatustorfotshöna
 265,Megapodius decollatus,New Guinea Scrubfowl,papuastorfotshöna
 266,Megapodius reinwardt,Orange-footed Scrubfowl,orangefotad storfotshöna
-267,Cracidae,"Chachalacas, Curassows, Guans",Trädhöns
+267,Cracidae,Chachalacas/Curassows/Guans,Trädhöns
 268,Ortalis vetula,Plain Chachalaca,nordlig chachalaca
 269,Ortalis cinereiceps,Grey-headed Chachalaca,gråhuvad chachalaca
 270,Ortalis garrula,Chestnut-winged Chachalaca,brunvingad chachalaca
@@ -1389,7 +1389,7 @@
 1387,Pterocles quadricinctus,Four-banded Sandgrouse,fyrbandad flyghöna
 1388,Pterocles bicinctus,Double-banded Sandgrouse,tvåbandad flyghöna
 1389,Pterocles burchelli,Burchell's Sandgrouse,pärlflyghöna
-1390,Columbidae,"Pigeons, Doves",Duvor
+1390,Columbidae,Pigeons/Doves,Duvor
 1391,Columba livia,Rock Dove,klippduva
 1392,Columba rupestris,Hill Pigeon,stenduva
 1393,Columba leuconota,Snow Pigeon,snöduva
@@ -1761,7 +1761,7 @@
 1759,Rallicula rubra,Chestnut Forest Rail,kastanjedunrall
 1760,Rallicula forbesi,Forbes's Forest Rail,svartvingad dunrall
 1761,Rallicula mayri,Mayr's Forest Rail,cyklopdunrall
-1762,Rallidae,"Rails, Crakes & Coots",Rallar
+1762,Rallidae,Rails/Crakes/Coots,Rallar
 1763,Canirallus oculeus,Grey-throated Rail,gråstrupig rall
 1764,Mustelirallus albicollis,Ash-throated Crake,vithakad rall
 1765,Neocrex erythrops,Paint-billed Crake,gulrödnäbbad rall
@@ -1921,8 +1921,8 @@
 1919,Gruidae,Cranes,Tranor
 1920,Balearica regulorum,Grey Crowned Crane,grå krontrana
 1921,Balearica pavonina,Black Crowned Crane,svart krontrana
-1922,Leucogeranus leucogeranus,Siberian Crane,snötrana (10)
-1923,Antigone canadensis,Sandhill Crane,prärietrana (10)
+1922,Leucogeranus leucogeranus,Siberian Crane,snötrana
+1923,Antigone canadensis,Sandhill Crane,prärietrana
 1924,Antigone vipio,White-naped Crane,glasögontrana
 1925,Antigone antigone,Sarus Crane,sarustrana
 1926,Antigone rubicunda,Brolga,brolgatrana
@@ -1938,8 +1938,8 @@
 1936,Aramus guarauna,Limpkin,ralltrana
 1937,Podicipedidae,Grebes,Doppingar
 1938,Tachybaptus rufolavatus,Alaotra grebe,alaotradopping †
-1939,Tachybaptus ruficollis,Little Grebe,smådopping (11)
-1940,Tachybaptus tricolor,Tricolored Grebe,indonesisk smådopping (11)
+1939,Tachybaptus ruficollis,Little Grebe,smådopping
+1940,Tachybaptus tricolor,Tricolored Grebe,indonesisk smådopping
 1941,Tachybaptus novaehollandiae,Australasian Grebe,australisk smådopping
 1942,Tachybaptus pelzelnii,Madagascar Grebe,madagaskarsmådopping
 1943,Tachybaptus dominicus,Least Grebe,dvärgdopping
@@ -1986,9 +1986,9 @@
 1984,Turnix pyrrhothorax,Red-chested Buttonquail,rödbröstad springhöna
 1985,Turnix velox,Little Buttonquail,mindre springhöna
 1986,Ortyxelos meiffrenii,Quail-Plover,lärkspringhöna
-1987,Burhinidae,"Stone-curlews, Thick-knees",Tjockfotar
-1988,Burhinus oedicnemus,Eurasian Stone-curlew,tjockfot (12)
-1989,Burhinus indicus,Indian Stone-curlew,indisk tjockfot (12)
+1987,Burhinidae,Stone-curlews/Thick-knees,Tjockfotar
+1988,Burhinus oedicnemus,Eurasian Stone-curlew,tjockfot
+1989,Burhinus indicus,Indian Stone-curlew,indisk tjockfot
 1990,Burhinus senegalensis,Senegal Thick-knee,senegaltjockfot
 1991,Burhinus vermiculatus,Water Thick-knee,vattentjockfot
 1992,Burhinus capensis,Spotted Thick-knee,fläcktjockfot
@@ -2017,7 +2017,7 @@
 2015,Haematopus fuliginosus,Sooty Oystercatcher,sotstrandskata
 2016,Ibidorhynchidae,Ibisbill,Ibisnäbbar
 2017,Ibidorhyncha struthersii,Ibisbill,ibisnäbb
-2018,Recurvirostridae,"Stilts, Avocets",Skärfläckor
+2018,Recurvirostridae,Stilts/Avocets,Skärfläckor
 2019,Himantopus himantopus,Black-winged Stilt,styltlöpare
 2020,Himantopus leucocephalus,Pied Stilt,australisk styltlöpare
 2021,Himantopus mexicanus,Black-necked Stilt,amerikansk styltlöpare
@@ -2119,7 +2119,7 @@
 2117,Attagis malouinus,White-bellied Seedsnipe,vitbukig frösnäppa
 2118,Thinocorus orbignyianus,Grey-breasted Seedsnipe,gråbröstad frösnäppa
 2119,Thinocorus rumicivorus,Least Seedsnipe,mindre frösnäppa
-2120,Scolopacidae,"Sandpipers, Snipes",Snäppor
+2120,Scolopacidae,Sandpipers/Snipes,Snäppor
 2121,Bartramia longicauda,Upland Sandpiper,piparsnäppa
 2122,Numenius tahitiensis,Bristle-thighed Curlew,alaskaspov
 2123,Numenius phaeopus,Eurasian Whimbrel,småspov
@@ -2220,7 +2220,7 @@
 2218,Tringa melanoleuca,Greater Yellowlegs,större gulbena
 2219,Dromadidae,Crab-plover,Hägerpipare
 2220,Dromas ardeola,Crab-plover,hägerpipare
-2221,Glareolidae,"Coursers, Pratincoles",Vadarsvalor
+2221,Glareolidae,Coursers/Pratincoles,Vadarsvalor
 2222,Cursorius cursor,Cream-colored Courser,ökenlöpare
 2223,Cursorius somalensis,Somali Courser,somaliaökenlöpare
 2224,Cursorius rufus,Burchell's Courser,kapökenlöpare
@@ -2238,7 +2238,7 @@
 2236,Glareola nuchalis,Rock Pratincole,klippvadarsvala
 2237,Glareola cinerea,Grey Pratincole,grå vadarsvala
 2238,Glareola lactea,Small Pratincole,mindre vadarsvala
-2239,Laridae,"Gulls, Terns, Skimmers",Måsfåglar
+2239,Laridae,Gulls/Terns/Skimmers,Måsfåglar
 2240,Anous stolidus,Brown Noddy,brun noddy
 2241,Anous tenuirostris,Lesser Noddy,mindre noddy
 2242,Anous minutus,Black Noddy,svart noddy
@@ -2282,8 +2282,8 @@
 2280,Larus atlanticus,Olrog's Gull,olrogtrut
 2281,Larus crassirostris,Black-tailed Gull,svartstjärtad mås
 2282,Larus heermanni,Heermann's Gull,vithuvad mås
-2283,Larus canus,Common Gull,fiskmås (13)
-2284,Larus brachyrhynchus,Short-billed Gull,kortnäbbad mås (13)
+2283,Larus canus,Common Gull,fiskmås
+2284,Larus brachyrhynchus,Short-billed Gull,kortnäbbad mås
 2285,Larus delawarensis,Ring-billed Gull,ringnäbbad mås
 2286,Larus californicus,California Gull,prärietrut
 2287,Larus marinus,Great Black-backed Gull,havstrut
@@ -2295,19 +2295,19 @@
 2293,Larus glaucoides,Iceland Gull,vitvingad trut
 2294,Larus argentatus,European Herring Gull,gråtrut
 2295,Larus smithsonianus,American Herring Gull,kanadatrut
-2296,Larus vegae,Vega Gull,vegatrut (14)
+2296,Larus vegae,Vega Gull,vegatrut
 2297,Larus cachinnans,Caspian Gull,kaspisk trut
 2298,Larus michahellis,Yellow-legged Gull,medelhavstrut
 2299,Larus armenicus,Armenian Gull,armenisk trut
 2300,Larus schistisagus,Slaty-backed Gull,skiffertrut
-2301,Larus fuscus,Lesser Black-backed Gull,silltrut (15)
-2302,Gelochelidon nilotica,Gull-billed Tern,sandtärna (16)
-2303,Gelochelidon macrotarsa,Australian Tern,australisk sandtärna (16)
+2301,Larus fuscus,Lesser Black-backed Gull,silltrut
+2302,Gelochelidon nilotica,Gull-billed Tern,sandtärna
+2303,Gelochelidon macrotarsa,Australian Tern,australisk sandtärna
 2304,Hydroprogne caspia,Caspian Tern,skräntärna
-2305,Thalasseus maximus,Royal Tern,kungstärna (17)
+2305,Thalasseus maximus,Royal Tern,kungstärna
 2306,Thalasseus bergii,Greater Crested Tern,tofstärna
 2307,Thalasseus bengalensis,Lesser Crested Tern,iltärna
-2308,Thalasseus albididorsalis,West African Crested Tern,guineatärna (17)
+2308,Thalasseus albididorsalis,West African Crested Tern,guineatärna
 2309,Thalasseus bernsteini,Chinese Crested Tern,mingtärna
 2310,Thalasseus sandvicensis,Sandwich Tern,kentsk tärna
 2311,Thalasseus acuflavidus,Cabot's Tern,Cabots tärna
@@ -2424,22 +2424,22 @@
 2422,Phoebastria nigripes,Black-footed Albatross,svartfotad albatross
 2423,Phoebastria irrorata,Waved Albatross,galápagosalbatross
 2424,Phoebastria albatrus,Short-tailed Albatross,gulnackad albatross
-2425,Diomedea exulans,Wandering Albatross,vandringsalbatross (18)
-2426,Diomedea antipodensis,Antipodean Albatross,antipodalbatross (18)
-2427,Diomedea amsterdamensis,Amsterdam Albatross,amsterdamalbatross (18)
-2428,Diomedea dabbenena,Tristan Albatross,tristanalbatross (18)
+2425,Diomedea exulans,Wandering Albatross,vandringsalbatross
+2426,Diomedea antipodensis,Antipodean Albatross,antipodalbatross
+2427,Diomedea amsterdamensis,Amsterdam Albatross,amsterdamalbatross
+2428,Diomedea dabbenena,Tristan Albatross,tristanalbatross
 2429,Diomedea epomophora,Southern Royal Albatross,sydlig kungsalbatross
 2430,Diomedea sanfordi,Northern Royal Albatross,nordlig kungsalbatross
 2431,Phoebetria fusca,Sooty Albatross,sotalbatross
 2432,Phoebetria palpebrata,Light-mantled Albatross,ljusryggig albatross
-2433,Thalassarche melanophris,Black-browed Albatross,svartbrynad albatross (19)
-2434,Thalassarche impavida,Campbell Albatross,campbellalbatross (19)
-2435,Thalassarche cauta,Shy Albatross,gråkindad albatross (20)
-2436,Thalassarche eremita,Chatham Albatross,chathamalbatross (20)
-2437,Thalassarche salvini,Salvin's Albatross,salvinalbatross (20)
+2433,Thalassarche melanophris,Black-browed Albatross,svartbrynad albatross
+2434,Thalassarche impavida,Campbell Albatross,campbellalbatross
+2435,Thalassarche cauta,Shy Albatross,gråkindad albatross
+2436,Thalassarche eremita,Chatham Albatross,chathamalbatross
+2437,Thalassarche salvini,Salvin's Albatross,salvinalbatross
 2438,Thalassarche chrysostoma,Grey-headed Albatross,gråhuvad albatross
-2439,Thalassarche chlororhynchos,Atlantic Yellow-nosed Albatross,mindre albatross (21)
-2440,Thalassarche carteri,Indian Yellow-nosed Albatross,gulnäbbad albatross (21)
+2439,Thalassarche chlororhynchos,Atlantic Yellow-nosed Albatross,mindre albatross
+2440,Thalassarche carteri,Indian Yellow-nosed Albatross,gulnäbbad albatross
 2441,Thalassarche bulleri,Buller's Albatross,vitpannad albatross
 2442,Hydrobatidae,Northern Storm Petrels,Nordstormsvalor
 2443,Hydrobates pelagicus,European Storm Petrel,stormsvala
@@ -2451,16 +2451,16 @@
 2449,Hydrobates socorroensis,Townsend's Storm Petrel,townsendstormsvala
 2450,Hydrobates cheimomnestes,Ainley's Storm Petrel,ainleystormsvala
 2451,Hydrobates homochroa,Ashy Storm Petrel,kalifornisk stormsvala
-2452,Hydrobates castro,Band-rumped Storm Petrel,oceanlöpare (22)
-2453,Hydrobates monteiroi,Monteiro's Storm Petrel,monteirostormsvala (22)
-2454,Hydrobates jabejabe,Cape Verde Storm Petrel,kapverdestormsvala (22)
+2452,Hydrobates castro,Band-rumped Storm Petrel,oceanlöpare
+2453,Hydrobates monteiroi,Monteiro's Storm Petrel,monteirostormsvala
+2454,Hydrobates jabejabe,Cape Verde Storm Petrel,kapverdestormsvala
 2455,Hydrobates tethys,Wedge-rumped Storm Petrel,vitgumpad stormsvala
 2456,Hydrobates melania,Black Storm Petrel,svart stormsvala
 2457,Hydrobates macrodactylus,Guadalupe Storm Petrel,guadalupestormsvala †
 2458,Hydrobates markhami,Markham's Storm Petrel,sotstormsvala
 2459,Hydrobates tristrami,Tristram's Storm Petrel,tristramstormsvala
 2460,Hydrobates microsoma,Least Storm Petrel,dvärgstormsvala
-2461,Procellariidae,"Petrels, Shearwaters, Diving Petrels",Liror
+2461,Procellariidae,Petrels/Shearwaters/Diving Petrels,Liror
 2462,Macronectes giganteus,Southern Giant Petrel,sydlig jättestormfågel
 2463,Macronectes halli,Northern Giant Petrel,nordlig jättestormfågel
 2464,Fulmarus glacialis,Northern Fulmar,stormfågel
@@ -2485,8 +2485,8 @@
 2483,Pterodroma ultima,Murphy's Petrel,murphypetrell
 2484,Pterodroma mollis,Soft-plumaged Petrel,sammetspetrell
 2485,Pterodroma madeira,Zino's Petrel,madeirapetrell
-2486,Pterodroma feae,Fea's Petrel,kapverdepetrell (23)
-2487,Pterodroma deserta,Desertas Petrel,desertaspetrell (23)
+2486,Pterodroma feae,Fea's Petrel,kapverdepetrell
+2487,Pterodroma deserta,Desertas Petrel,desertaspetrell
 2488,Pterodroma cahow,Bermuda Petrel,bermudapetrell
 2489,Pterodroma hasitata,Black-capped Petrel,karibpetrell
 2490,Pterodroma caribbaea,Jamaican Petrel,jamaicapetrell †
@@ -2551,8 +2551,8 @@
 2549,Puffinus heinrothi,Heinroth's Shearwater,melanesisk lira
 2550,Puffinus assimilis,Little Shearwater,dvärglira
 2551,Puffinus elegans,Subantarctic Shearwater,subantarktisk lira
-2552,Puffinus baroli,Barolo Shearwater,barololira (24)
-2553,Puffinus boydi,Boyd's Shearwater,boydlira (24)
+2552,Puffinus baroli,Barolo Shearwater,barololira
+2553,Puffinus boydi,Boyd's Shearwater,boydlira
 2554,Pelecanoides garnotii,Peruvian Diving Petrel,perudykpetrell
 2555,Pelecanoides magellani,Magellanic Diving Petrel,magellandykpetrell
 2556,Pelecanoides georgicus,South Georgia Diving Petrel,brednäbbad dykpetrell
@@ -2586,7 +2586,7 @@
 2584,Fregata magnificens,Magnificent Frigatebird,praktfregattfågel
 2585,Fregata minor,Great Frigatebird,större fregattfågel
 2586,Fregata ariel,Lesser Frigatebird,mindre fregattfågel
-2587,Sulidae,"Gannets, Boobies",Sulor
+2587,Sulidae,Gannets/Boobies,Sulor
 2588,Morus bassanus,Northern Gannet,havssula
 2589,Morus capensis,Cape Gannet,kapsula
 2590,Morus serrator,Australasian Gannet,australisk sula
@@ -2597,7 +2597,7 @@
 2595,Sula granti,Nazca Booby,nazcasula
 2596,Sula sula,Red-footed Booby,rödfotad sula
 2597,Sula leucogaster,Brown Booby,brunsula
-2598,Phalacrocoracidae,"Cormorants, Shags",Skarvar
+2598,Phalacrocoracidae,Cormorants/Shags,Skarvar
 2599,Microcarbo pygmaeus,Pygmy Cormorant,dvärgskarv
 2600,Microcarbo africanus,Reed Cormorant,långstjärtad skarv
 2601,Microcarbo coronatus,Crowned Cormorant,kronskarv
@@ -2618,8 +2618,8 @@
 2616,Phalacrocorax fuscicollis,Indian Cormorant,indisk skarv
 2617,Phalacrocorax capensis,Cape Cormorant,kapskarv
 2618,Phalacrocorax capillatus,Japanese Cormorant,japansk skarv
-2619,Phalacrocorax lucidus,White-breasted Cormorant,vitbröstad skarv (25)
-2620,Phalacrocorax carbo,Great Cormorant,storskarv (25)
+2619,Phalacrocorax lucidus,White-breasted Cormorant,vitbröstad skarv
+2620,Phalacrocorax carbo,Great Cormorant,storskarv
 2621,Gulosus aristotelis,European Shag,toppskarv
 2622,Nannopterum harrisi,Flightless Cormorant,galápagosskarv
 2623,Nannopterum brasilianum,Neotropic Cormorant,amazonskarv
@@ -2640,12 +2640,12 @@
 2638,Leucocarbo verrucosus,Kerguelen Shag,kerguelenskarv
 2639,Leucocarbo nivalis,Heard Island Shag,heardskarv
 2640,Leucocarbo purpurascens,Macquarie Shag,macquarieskarv
-2641,Anhingidae,"Anhingas, Darters",Ormhalsfåglar
+2641,Anhingidae,Anhingas/Darters,Ormhalsfåglar
 2642,Anhinga melanogaster,Oriental Darter,indisk ormhalsfågel
 2643,Anhinga rufa,African Darter,afrikansk ormhalsfågel
 2644,Anhinga novaehollandiae,Australasian Darter,australisk ormhalsfågel
 2645,Anhinga anhinga,Anhinga,amerikansk ormhalsfågel
-2646,Threskiornithidae,"Ibises, Spoonbills",Ibisar
+2646,Threskiornithidae,Ibises/Spoonbills,Ibisar
 2647,Threskiornis aethiopicus,African Sacred Ibis,helig ibis
 2648,Threskiornis bernieri,Malagasy Sacred Ibis,madagaskaribis
 2649,Threskiornis solitarius,Reunion Ibis,solitäribis †
@@ -2682,7 +2682,7 @@
 2680,Platalea regia,Royal Spoonbill,kungsskedstork
 2681,Platalea flavipes,Yellow-billed Spoonbill,gulnäbbad skedstork
 2682,Platalea ajaja,Roseate Spoonbill,rosenskedstork
-2683,Ardeidae,"Herons, Bitterns",Hägrar
+2683,Ardeidae,Herons/Bitterns,Hägrar
 2684,Zonerodius heliosylus,Forest Bittern,papuatigerhäger
 2685,Tigriornis leucolopha,White-crested Tiger Heron,afrikansk tigerhäger
 2686,Tigrisoma lineatum,Rufescent Tiger Heron,rödhalsad tigerhäger
@@ -2718,16 +2718,16 @@
 2716,Nyctanassa violacea,Yellow-crowned Night Heron,gulkronad natthäger
 2717,Nyctanassa carcinocatactes,Bermuda Night Heron,bermudanatthäger †
 2718,Butorides virescens,Green Heron,grönryggig häger
-2719,Butorides sundevalli,Lava Heron,galápagoshäger (26)
-2720,Butorides striata,Striated Heron,mangrovehäger (26)
+2719,Butorides sundevalli,Lava Heron,galápagoshäger
+2720,Butorides striata,Striated Heron,mangrovehäger
 2721,Ardeola ralloides,Squacco Heron,rallhäger
 2722,Ardeola grayii,Indian Pond Heron,rishäger
 2723,Ardeola bacchus,Chinese Pond Heron,bacchushäger
 2724,Ardeola speciosa,Javan Pond Heron,svartryggig häger
 2725,Ardeola idae,Malagasy Pond Heron,madagaskarrallhäger
 2726,Ardeola rufiventris,Rufous-bellied Heron,sammetshäger
-2727,Bubulcus ibis,Western Cattle Egret,kohäger (27)
-2728,Bubulcus coromandus,Eastern Cattle Egret,orientkohäger (27)
+2727,Bubulcus ibis,Western Cattle Egret,kohäger
+2728,Bubulcus coromandus,Eastern Cattle Egret,orientkohäger
 2729,Ardea cinerea,Grey Heron,gråhäger
 2730,Ardea herodias,Great Blue Heron,amerikansk gråhäger
 2731,Ardea cocoi,Cocoi Heron,cocoihäger
@@ -2781,9 +2781,9 @@
 2779,Sagittariidae,Secretarybird,Sekreterarfåglar
 2780,Sagittarius serpentarius,Secretarybird,sekreterarfågel
 2781,Pandionidae,Ospreys,Fiskgjusar
-2782,Pandion haliaetus,Western Osprey,fiskgjuse (28)
-2783,Pandion cristatus,Eastern Osprey,australisk fiskgjuse (28)
-2784,Accipitridae,"Kites, Hawks, Eagles",Hökartade rovfåglar
+2782,Pandion haliaetus,Western Osprey,fiskgjuse
+2783,Pandion cristatus,Eastern Osprey,australisk fiskgjuse
+2784,Accipitridae,Kites/Hawks/Eagles,Hökartade rovfåglar
 2785,Elanus caeruleus,Black-winged Kite,svartvingad glada
 2786,Elanus axillaris,Black-shouldered Kite,svartskuldrad glada
 2787,Elanus leucurus,White-tailed Kite,vitstjärtad glada
@@ -2963,8 +2963,8 @@
 2961,Circus melanoleucos,Pied Harrier,svartvit kärrhök
 2962,Circus pygargus,Montagu's Harrier,ängshök
 2963,Milvus milvus,Red Kite,röd glada
-2964,Milvus migrans,Black Kite,brun glada (29)
-2965,Milvus aegyptius,Yellow-billed Kite,gulnäbbad glada (29)
+2964,Milvus migrans,Black Kite,brun glada
+2965,Milvus aegyptius,Yellow-billed Kite,gulnäbbad glada
 2966,Haliastur sphenurus,Whistling Kite,visselglada
 2967,Haliastur indus,Brahminy Kite,brahminglada
 2968,Haliaeetus leucogaster,White-bellied Sea Eagle,vitbukig havsörn
@@ -3027,12 +3027,12 @@
 3025,Buteo regalis,Ferruginous Hawk,kungsvråk
 3026,Buteo lagopus,Rough-legged Buzzard,fjällvråk
 3027,Buteo hemilasius,Upland Buzzard,mongolvråk
-3028,Buteo japonicus,Eastern Buzzard,orientvråk (30)
-3029,Buteo refectus,Himalayan Buzzard,himalayavråk (30)
+3028,Buteo japonicus,Eastern Buzzard,orientvråk
+3029,Buteo refectus,Himalayan Buzzard,himalayavråk
 3030,Buteo rufinus,Long-legged Buzzard,örnvråk
 3031,Buteo bannermani,Cape Verde Buzzard,kapverdevråk
 3032,Buteo socotraensis,Socotra Buzzard,sokotravråk
-3033,Buteo buteo,Common Buzzard,ormvråk (30)
+3033,Buteo buteo,Common Buzzard,ormvråk
 3034,Buteo trizonatus,Forest Buzzard,skogsvråk
 3035,Buteo oreophilus,Mountain Buzzard,bergvråk
 3036,Buteo archeri,Archer's Buzzard,somaliavråk
@@ -3172,8 +3172,8 @@
 3170,Otus sauzieri,Mauritius Owl,mauritiusdvärguv †
 3171,Otus murivorus,Rodrigues Owl,rodriguesdvärguv †
 3172,Otus pembaensis,Pemba Scops Owl,pembadvärguv
-3173,Otus scops,Eurasian Scops Owl,dvärguv (31)
-3174,Otus cyprius,Cyprus Scops Owl,cyperndvärguv (31)
+3173,Otus scops,Eurasian Scops Owl,dvärguv
+3174,Otus cyprius,Cyprus Scops Owl,cyperndvärguv
 3175,Otus brucei,Pallid Scops Owl,blek dvärguv
 3176,Otus pamelae,Arabian Scops Owl,arabisk dvärguv
 3177,Otus senegalensis,African Scops Owl,afrikansk dvärguv
@@ -3225,9 +3225,9 @@
 3223,Bubo bengalensis,Indian Eagle-Owl,klippuv
 3224,Bubo ascalaphus,Pharaoh Eagle-Owl,ökenuv
 3225,Bubo capensis,Cape Eagle-Owl,kapuv
-3226,Bubo milesi,Arabian Eagle-Owl,arabuv (32)
+3226,Bubo milesi,Arabian Eagle-Owl,arabuv
 3227,Bubo cinerascens,Greyish Eagle-Owl,saheluv
-3228,Bubo africanus,Spotted Eagle-Owl,fläckuv (32)
+3228,Bubo africanus,Spotted Eagle-Owl,fläckuv
 3229,Bubo poensis,Fraser's Eagle-Owl,guineauv
 3230,Bubo vosseleri,Usambara Eagle-Owl,usambarauv
 3231,Bubo lacteus,Verreaux's Eagle-Owl,mjölkuv
@@ -3288,8 +3288,8 @@
 3286,Strix hylophila,Rusty-barred Owl,rostbandad uggla
 3287,Strix chacoensis,Chaco Owl,chacouggla
 3288,Strix rufipes,Rufous-legged Owl,patagonienuggla
-3289,Strix uralensis,Ural Owl,slaguggla (33)
-3290,Strix davidi,Pere David's Owl,sichuanuggla (33)
+3289,Strix uralensis,Ural Owl,slaguggla
+3290,Strix davidi,Pere David's Owl,sichuanuggla
 3291,Strix nebulosa,Great Grey Owl,lappuggla
 3292,Strix woodfordii,African Wood Owl,afrikansk skogsuggla
 3293,Strix virgata,Mottled Owl,brunstrimmig uggla
@@ -3601,9 +3601,9 @@
 3599,Merops revoilii,Somali Bee-eater,somaliabiätare
 3600,Merops albicollis,White-throated Bee-eater,vitstrupig biätare
 3601,Merops boehmi,Böhm's Bee-eater,böhmbiätare
-3602,Merops viridissimus,African Green Bee-eater,sahelbiätare (34)
-3603,Merops cyanophrys,Arabian Green Bee-eater,arabisk biätare (34)
-3604,Merops orientalis,Asian Green Bee-eater,orientbiätare (34)
+3602,Merops viridissimus,African Green Bee-eater,sahelbiätare
+3603,Merops cyanophrys,Arabian Green Bee-eater,arabisk biätare
+3604,Merops orientalis,Asian Green Bee-eater,orientbiätare
 3605,Merops persicus,Blue-cheeked Bee-eater,grön biätare
 3606,Merops superciliosus,Olive Bee-eater,olivbiätare
 3607,Merops philippinus,Blue-tailed Bee-eater,blåstjärtad biätare
@@ -4042,8 +4042,8 @@
 4040,Picus vaillantii,Levaillant's Woodpecker,atlasgröngöling
 4041,Picus rabieri,Red-collared Woodpecker,rödhuvad gröngöling
 4042,Picus erythropygius,Black-headed Woodpecker,svarthuvad gröngöling
-4043,Picus canus,Grey-headed Woodpecker,gråspett (35)
-4044,Picus dedemi,Sumatran Woodpecker,sumatragröngöling (35)
+4043,Picus canus,Grey-headed Woodpecker,gråspett
+4044,Picus dedemi,Sumatran Woodpecker,sumatragröngöling
 4045,Dinopium shorii,Himalayan Flameback,himalayaflamspett
 4046,Dinopium javanense,Common Flameback,guldryggig flamspett
 4047,Dinopium everetti,Spot-throated Flameback,fläckstrupig flamspett
@@ -4074,7 +4074,7 @@
 4072,Cariamidae,Seriemas,Seriemor
 4073,Cariama cristata,Red-legged Seriema,rödbent seriema
 4074,Chunga burmeisteri,Black-legged Seriema,svartbent seriema
-4075,Falconidae,"Caracaras, Falcons",Falkar
+4075,Falconidae,Caracaras/Falcons,Falkar
 4076,Daptrius ater,Black Caracara,svart karakara
 4077,Ibycter americanus,Red-throated Caracara,rödstrupig karakara
 4078,Phalcoboenus carunculatus,Carunculated Caracara,skrynkelstrupig karakara
@@ -5342,7 +5342,7 @@
 5340,Melanopareia maximiliani,Olive-crowned Crescentchest,chacomånbröst
 5341,Melanopareia maranonica,Maranon Crescentchest,marañónmånbröst
 5342,Melanopareia elegans,Elegant Crescentchest,praktmånbröst
-5343,Tyrannidae,"Tyrant Flycatchers, Calyptura",Tyranner
+5343,Tyrannidae,Tyrant Flycatchers/Calyptura,Tyranner
 5344,Piprites griseiceps,Grey-headed Piprites,gråhuvad piprit
 5345,Piprites chloris,Wing-barred Piprites,grånackad piprit
 5346,Piprites pileata,Black-capped Piprites,svartkronad piprit
@@ -5901,7 +5901,7 @@
 5899,Ceratopipra chloromeros,Round-tailed Manakin,rundstjärtad manakin
 5900,Ceratopipra erythrocephala,Golden-headed Manakin,gyllenhuvad manakin
 5901,Ceratopipra rubrocapilla,Red-headed Manakin,rödhuvad manakin
-5902,Tityridae,"Tityras, Becards, Sharpbill",Tityror
+5902,Tityridae,Tityras/Becards/Sharpbill,Tityror
 5903,Oxyruncus cristatus,Sharpbill,vassnäbb
 5904,Onychorhynchus coronatus,Amazonian Royal Flycatcher,amazonkrontyrann
 5905,Onychorhynchus mexicanus,Northern Royal Flycatcher,nordlig krontyrann
@@ -6404,7 +6404,7 @@
 6402,Telophorus viridis,Gorgeous Bushshrike,rubinbusktörnskata
 6403,Telophorus dohertyi,Doherty's Bushshrike,rödpannad busktörnskata
 6404,Telophorus zeylonus,Bokmakierie,gulstrupig busktörnskata
-6405,Telophorus cruentus,Rosy-patched Bushshrike,rosabröstad busktörnskata (36)
+6405,Telophorus cruentus,Rosy-patched Bushshrike,rosabröstad busktörnskata
 6406,Bocagia minuta,Marsh Tchagra,sumptchagra
 6407,Tchagra australis,Brown-crowned Tchagra,brunkronad tchagra
 6408,Tchagra jamesi,Three-streaked Tchagra,trestreckad tchagra
@@ -6714,7 +6714,7 @@
 6712,Lanius minor,Lesser Grey Shrike,svartpannad törnskata
 6713,Lanius ludovicianus,Loggerhead Shrike,amerikansk törnskata
 6714,Lanius borealis,Northern Shrike,beringvarfågel
-6715,Lanius excubitor,Great Grey Shrike,varfågel (37)
+6715,Lanius excubitor,Great Grey Shrike,varfågel
 6716,Lanius meridionalis,Iberian Grey Shrike,iberisk varfågel
 6717,Lanius giganteus,Giant Grey Shrike,jättevarfågel
 6718,Lanius sphenocercus,Chinese Grey Shrike,kinesisk varfågel
@@ -7108,13 +7108,13 @@
 7106,Podoces panderi,Pander's Ground Jay,Panders ökenskrika
 7107,Podoces pleskei,Pleske's Ground Jay,Pleskes ökenskrika
 7108,Nucifraga columbiana,Clark's Nutcracker,grå nötkråka
-7109,Nucifraga caryocatactes,Spotted Nutcracker,nötkråka (38)
-7110,Nucifraga multipunctata,Kashmir Nutcracker,kashmirnötkråka (38)
+7109,Nucifraga caryocatactes,Spotted Nutcracker,nötkråka
+7110,Nucifraga multipunctata,Kashmir Nutcracker,kashmirnötkråka
 7111,Pyrrhocorax pyrrhocorax,Red-billed Chough,alpkråka
 7112,Pyrrhocorax graculus,Alpine Chough,alpkaja
 7113,Ptilostomus afer,Piapiac,piapiak
-7114,Coloeus monedula,Western Jackdaw,kaja (39)
-7115,Coloeus dauuricus,Daurian Jackdaw,klippkaja (39)
+7114,Coloeus monedula,Western Jackdaw,kaja
+7115,Coloeus dauuricus,Daurian Jackdaw,klippkaja
 7116,Corvus splendens,House Crow,huskråka
 7117,Corvus moneduloides,New Caledonian Crow,nyakaledonienkråka
 7118,Corvus unicolor,Banggai Crow,banggaikråka
@@ -7142,12 +7142,12 @@
 7140,Corvus nasicus,Cuban Crow,kubakråka
 7141,Corvus leucognaphalus,White-necked Crow,hispaniolakråka
 7142,Corvus hawaiiensis,Hawaiian Crow,hawaiikråka
-7143,Corvus corone,Carrion Crow,svartkråka (40)
-7144,Corvus cornix,Hooded Crow,gråkråka (40)
+7143,Corvus corone,Carrion Crow,svartkråka
+7144,Corvus cornix,Hooded Crow,gråkråka
 7145,Corvus torquatus,Collared Crow,halsbandskråka
-7146,Corvus macrorhynchos,Large-billed Crow,stornäbbad kråka (41)
-7147,Corvus levaillantii,Eastern Jungle Crow,östlig djungelkråka (41)
-7148,Corvus culminatus,Indian Jungle Crow,indisk djungelkråka (41)
+7146,Corvus macrorhynchos,Large-billed Crow,stornäbbad kråka
+7147,Corvus levaillantii,Eastern Jungle Crow,östlig djungelkråka
+7148,Corvus culminatus,Indian Jungle Crow,indisk djungelkråka
 7149,Corvus orru,Torresian Crow,torreskråka
 7150,Corvus insularis,Bismarck Crow,bismarckkråka
 7151,Corvus bennetti,Little Crow,mulgakråka
@@ -7468,27 +7468,27 @@
 7466,Galerida cristata,Crested Lark,tofslärka
 7467,Galerida malabarica,Malabar Lark,malabarlärka
 7468,Galerida macrorhyncha,Maghreb Lark,maghreblärka
-7469,Eremophila alpestris,Horned Lark,berglärka (42)
+7469,Eremophila alpestris,Horned Lark,berglärka
 7470,Eremophila bilopha,Temminck's Lark,ökenberglärka
 7471,Calandrella acutirostris,Hume's Short-toed Lark,höglandslärka
-7472,Calandrella dukhunensis,Mongolian Short-toed Lark,mongolisk korttålärka (43)
+7472,Calandrella dukhunensis,Mongolian Short-toed Lark,mongolisk korttålärka
 7473,Calandrella blanfordi,Blanford's Lark,blanfordlärka
 7474,Calandrella eremica,Rufous-capped Lark,brunkronad lärka
 7475,Calandrella cinerea,Red-capped Lark,rödkronad lärka
-7476,Calandrella brachydactyla,Greater Short-toed Lark,korttålärka (43)
+7476,Calandrella brachydactyla,Greater Short-toed Lark,korttålärka
 7477,Melanocorypha bimaculata,Bimaculated Lark,asiatisk kalanderlärka
 7478,Melanocorypha calandra,Calandra Lark,kalanderlärka
 7479,Melanocorypha yeltoniensis,Black Lark,svartlärka
 7480,Melanocorypha mongolica,Mongolian Lark,mongollärka
 7481,Melanocorypha maxima,Tibetan Lark,tibetlärka
 7482,Chersophilus duponti,Dupont's Lark,dupontlärka
-7483,Eremalauda dunni,Dunn's Lark,saharalärka (44)
-7484,Eremalauda eremodites,Arabian Lark,arablärka (44)
+7483,Eremalauda dunni,Dunn's Lark,saharalärka
+7484,Eremalauda eremodites,Arabian Lark,arablärka
 7485,Alaudala athensis,Athi Short-toed Lark,athidvärglärka
-7486,Alaudala cheleensis,Asian Short-toed Lark,sidenvägsdvärglärka (45)
+7486,Alaudala cheleensis,Asian Short-toed Lark,sidenvägsdvärglärka
 7487,Alaudala somalica,Somali Short-toed Lark,somaliadvärglärka
-7488,Alaudala rufescens,Mediterranean Short-toed Lark,medelhavsdvärglärka (45)
-7489,Alaudala heinei,Turkestan Short-toed Lark,turkestandvärglärka (45)
+7488,Alaudala rufescens,Mediterranean Short-toed Lark,medelhavsdvärglärka
+7489,Alaudala heinei,Turkestan Short-toed Lark,turkestandvärglärka
 7490,Alaudala raytal,Sand Lark,sanddvärglärka
 7491,Pycnonotidae,Bulbuls,Bulbyler
 7492,Andropadus importunus,Sombre Greenbul,buskgrönbulbyl
@@ -7646,10 +7646,10 @@
 7644,Pycnonotus leucogenys,Himalayan Bulbul,himalayabulbyl
 7645,Pycnonotus xanthopygos,White-spectacled Bulbul,levantbulbyl
 7646,Pycnonotus nigricans,African Red-eyed Bulbul,rödflikig bulbyl
-7647,Pycnonotus barbatus,Common Bulbul,trädgårdsbulbyl (46)
-7648,Pycnonotus dodsoni,Dodson's Bulbul,dodsonbulbyl (46)
-7649,Pycnonotus somaliensis,Somali Bulbul,somaliabulbyl (46)
-7650,Pycnonotus tricolor,Dark-capped Bulbul,trefärgad bulbyl (46)
+7647,Pycnonotus barbatus,Common Bulbul,trädgårdsbulbyl
+7648,Pycnonotus dodsoni,Dodson's Bulbul,dodsonbulbyl
+7649,Pycnonotus somaliensis,Somali Bulbul,somaliabulbyl
+7650,Pycnonotus tricolor,Dark-capped Bulbul,trefärgad bulbyl
 7651,Pycnonotus capensis,Cape Bulbul,kapbulbyl
 7652,Hirundinidae,"Swallows, Martins",Svalor
 7653,Pseudochelidon eurystomina,African River Martin,afrikansk flodsvala
@@ -7659,14 +7659,14 @@
 7657,Psalidoprocne obscura,Fanti Saw-wing,fantisvala
 7658,Psalidoprocne albiceps,White-headed Saw-wing,vithuvad svala
 7659,Psalidoprocne fuliginosa,Mountain Saw-wing,bergsvala
-7660,Neophedina cincta,Banded Martin,större backsvala (47)
+7660,Neophedina cincta,Banded Martin,större backsvala
 7661,Phedinopsis brazzae,Brazza's Martin,brazzasvala
 7662,Phedina borbonica,Mascarene Martin,madagaskarsvala
 7663,Riparia congica,Congo Martin,kongobacksvala
 7664,Riparia riparia,Sand Martin,backsvala
 7665,Riparia diluta,Pale Martin,blek backsvala
-7666,Riparia paludicola,Brown-throated Martin,brunstrupig backsvala (48)
-7667,Riparia chinensis,Grey-throated Martin,orientbacksvala (48)
+7666,Riparia paludicola,Brown-throated Martin,brunstrupig backsvala
+7667,Riparia chinensis,Grey-throated Martin,orientbacksvala
 7668,Tachycineta bicolor,Tree Swallow,trädsvala
 7669,Tachycineta cyaneoviridis,Bahama Swallow,bahamasvala
 7670,Tachycineta thalassina,Violet-green Swallow,violettgrön svala
@@ -7699,8 +7699,8 @@
 7697,Pseudhirundo griseopyga,Grey-rumped Swallow,grågumpsvala
 7698,Cheramoeca leucosterna,White-backed Swallow,vitryggig svala
 7699,Ptyonoprogne rupestris,Eurasian Crag Martin,klippsvala
-7700,Ptyonoprogne obsoleta,Pale Crag Martin,blek klippsvala (49)
-7701,Ptyonoprogne fuligula,Rock Martin,afrikansk klippsvala (49)
+7700,Ptyonoprogne obsoleta,Pale Crag Martin,blek klippsvala
+7701,Ptyonoprogne fuligula,Rock Martin,afrikansk klippsvala
 7702,Ptyonoprogne concolor,Dusky Crag Martin,mörk klippsvala
 7703,Hirundo nigrorufa,Black-and-rufous Swallow,rostbukig svala
 7704,Hirundo atrocaerulea,Blue Swallow,blåsvala
@@ -7717,8 +7717,8 @@
 7715,Hirundo angolensis,Angolan Swallow,angolasvala
 7716,Hirundo lucida,Red-chested Swallow,guineasvala
 7717,Hirundo aethiopica,Ethiopian Swallow,etiopisk svala
-7718,Delichon urbicum,Common House Martin,hussvala (50)
-7719,Delichon lagopodum,Siberian House Martin,sibirisk hussvala (50)
+7718,Delichon urbicum,Common House Martin,hussvala
+7719,Delichon lagopodum,Siberian House Martin,sibirisk hussvala
 7720,Delichon nipalense,Nepal House Martin,himalayahussvala
 7721,Delichon dasypus,Asian House Martin,orienthussvala
 7722,Cecropis semirufa,Red-breasted Swallow,savannsvala
@@ -7800,7 +7800,7 @@
 7798,Urosphena pallidipes,Pale-footed Bush Warbler,ljusbent stubbstjärt
 7799,Urosphena neumanni,Neumann's Warbler,neumannstubbstjärt
 7800,Scotocercidae,Streaked Scrub Warbler,Snårsångare
-7801,Scotocerca inquieta,Streaked Scrub Warbler,snårsångare (51)
+7801,Scotocerca inquieta,Streaked Scrub Warbler,snårsångare
 7802,Erythrocercidae,Yellow Flycatchers,Spretstjärtar
 7803,Erythrocercus holochlorus,Little Yellow Flycatcher,gul spretstjärt
 7804,Erythrocercus mccallii,Chestnut-capped Flycatcher,rödkronad spretstjärt
@@ -7846,7 +7846,7 @@
 7844,Phylloscopus neglectus,Plain Leaf Warbler,dvärgsångare
 7845,Phylloscopus subaffinis,Buff-throated Warbler,lidsångare
 7846,Phylloscopus trochilus,Willow Warbler,lövsångare
-7847,Phylloscopus sindianus,Mountain Chiffchaff,berggransångare (52)
+7847,Phylloscopus sindianus,Mountain Chiffchaff,berggransångare
 7848,Phylloscopus canariensis,Canary Islands Chiffchaff,kanariegransångare
 7849,Phylloscopus collybita,Common Chiffchaff,gransångare
 7850,Phylloscopus ibericus,Iberian Chiffchaff,iberisk gransångare
@@ -8116,8 +8116,8 @@
 8114,Prinia buchanani,Rufous-fronted Prinia,indisk prinia
 8115,Prinia rufescens,Rufescent Prinia,rostprinia
 8116,Prinia hodgsonii,Grey-breasted Prinia,gråbröstad prinia
-8117,Prinia gracilis,Graceful Prinia,nilprinia (53)
-8118,Prinia lepida,Delicate Prinia,dvärgprinia (53)
+8117,Prinia gracilis,Graceful Prinia,nilprinia
+8118,Prinia lepida,Delicate Prinia,dvärgprinia
 8119,Prinia sylvatica,Jungle Prinia,djungelprinia
 8120,Prinia familiaris,Bar-winged Prinia,bandvingad prinia
 8121,Prinia flaviventris,Yellow-bellied Prinia,gulbukig prinia
@@ -8227,9 +8227,9 @@
 8225,Curruca layardi,Layard's Warbler,karroosångare
 8226,Curruca boehmi,Banded Parisoma,halsbandssångare
 8227,Curruca subcoerulea,Chestnut-vented Warbler,rostgumpad sångare
-8228,Curruca minula,Desert Whitethroat,ökenärtsångare (54)
-8229,Curruca curruca,Lesser Whitethroat,ärtsångare (54)
-8230,Curruca althaea,Hume's Whitethroat,bergärtsångare (54)
+8228,Curruca minula,Desert Whitethroat,ökenärtsångare
+8229,Curruca curruca,Lesser Whitethroat,ärtsångare
+8230,Curruca althaea,Hume's Whitethroat,bergärtsångare
 8231,Curruca lugens,Brown Parisoma,sorgsångare
 8232,Curruca buryi,Yemen Warbler,jemensångare
 8233,Curruca leucomelaena,Arabian Warbler,arabsångare
@@ -8976,9 +8976,9 @@
 8974,Spodiopsar sericeus,Red-billed Starling,sidenstare
 8975,Spodiopsar cineraceus,White-cheeked Starling,gråstare
 8976,Gracupica nigricollis,Black-collared Starling,svarthalsad stare
-8977,Gracupica contra,Indian Pied Myna,svartvit stare (55)
-8978,Gracupica floweri,Siamese Pied Myna,thaistare (55)
-8979,Gracupica jalla,Javan Pied Myna,jallastare (55)
+8977,Gracupica contra,Indian Pied Myna,svartvit stare
+8978,Gracupica floweri,Siamese Pied Myna,thaistare
+8979,Gracupica jalla,Javan Pied Myna,jallastare
 8980,Agropsar sturninus,Daurian Starling,amurstare
 8981,Agropsar philippensis,Chestnut-cheeked Starling,rödkindad stare
 8982,Sturnia sinensis,White-shouldered Starling,mandarinstare
@@ -9266,8 +9266,8 @@
 9264,Melaenornis mariquensis,Marico Flycatcher,maricoflugsnappare
 9265,Melaenornis silens,Fiscal Flycatcher,fiskalflugsnappare
 9266,Empidornis semipartitus,Silverbird,silverflugsnappare
-9267,Muscicapa striata,Spotted Flycatcher,grå flugsnappare (56)
-9268,Muscicapa tyrrhenica,Mediterranean Flycatcher,tyrrensk flugsnappare (56)
+9267,Muscicapa striata,Spotted Flycatcher,grå flugsnappare
+9268,Muscicapa tyrrhenica,Mediterranean Flycatcher,tyrrensk flugsnappare
 9269,Muscicapa gambagae,Gambaga Flycatcher,akaciaflugsnappare
 9270,Muscicapa griseisticta,Grey-streaked Flycatcher,streckad flugsnappare
 9271,Muscicapa sibirica,Dark-sided Flycatcher,sibirisk flugsnappare
@@ -9533,8 +9533,8 @@
 9531,Myrmecocichla monticola,Mountain Wheatear,kaptermitskvätta
 9532,Myrmecocichla arnotti,Arnot's Chat,miombotermitskvätta
 9533,Myrmecocichla collaris,Ruaha Chat,ruahatermitskvätta
-9534,Oenanthe oenanthe,Northern Wheatear,stenskvätta (57)
-9535,Oenanthe seebohmi,Atlas Wheatear,atlasstenskvätta (57)
+9534,Oenanthe oenanthe,Northern Wheatear,stenskvätta
+9535,Oenanthe seebohmi,Atlas Wheatear,atlasstenskvätta
 9536,Oenanthe pileata,Capped Wheatear,svartbröstad stenskvätta
 9537,Oenanthe bottae,Red-breasted Wheatear,svartpannad stenskvätta
 9538,Oenanthe heuglinii,Heuglin's Wheatear,sahelstenskvätta
@@ -9560,8 +9560,8 @@
 9558,Oenanthe albonigra,Hume's Wheatear,svartvit stenskvätta
 9559,Oenanthe finschii,Finsch's Wheatear,finschstenskvätta
 9560,Oenanthe halophila,Maghreb Wheatear,maghrebstenskvätta
-9561,Oenanthe lugens,Mourning Wheatear,sorgstenskvätta (58)
-9562,Oenanthe warriae,Basalt Wheatear,basaltstenskvätta (58)
+9561,Oenanthe lugens,Mourning Wheatear,sorgstenskvätta
+9562,Oenanthe warriae,Basalt Wheatear,basaltstenskvätta
 9563,Oenanthe lugentoides,Arabian Wheatear,arabstenskvätta
 9564,Oenanthe xanthoprymna,Kurdish Wheatear,kurdstenskvätta
 9565,Oenanthe chrysopygia,Red-tailed Wheatear,persisk stenskvätta
@@ -9982,8 +9982,8 @@
 9980,Lonchura fuscans,Dusky Munia,borneomunia
 9981,Lonchura leucogastra,White-bellied Munia,vitbukig munia
 9982,Lonchura leucogastroides,Javan Munia,javamunia
-9983,Lonchura malacca,Tricolored Munia,trefärgad munia (59)
-9984,Lonchura atricapilla,Chestnut Munia,svarthuvad munia (59)
+9983,Lonchura malacca,Tricolored Munia,trefärgad munia
+9984,Lonchura atricapilla,Chestnut Munia,svarthuvad munia
 9985,Lonchura ferruginosa,White-capped Munia,valnötsmunia
 9986,Lonchura maja,White-headed Munia,vithuvad munia
 9987,Lonchura pallida,Pale-headed Munia,blekhuvad munia
@@ -10128,8 +10128,8 @@
 10126,Prunella immaculata,Maroon-backed Accentor,vitögd järnsparv
 10127,Motacillidae,"Wagtails, Pipits",Ärlor
 10128,Dendronanthus indicus,Forest Wagtail,trädärla
-10129,Motacilla flava,Western Yellow Wagtail,gulärla (60)
-10130,Motacilla tschutschensis,Eastern Yellow Wagtail,östlig gulärla (60)
+10129,Motacilla flava,Western Yellow Wagtail,gulärla
+10130,Motacilla tschutschensis,Eastern Yellow Wagtail,östlig gulärla
 10131,Motacilla citreola,Citrine Wagtail,citronärla
 10132,Motacilla capensis,Cape Wagtail,kapärla
 10133,Motacilla flaviventris,Madagascar Wagtail,madagaskarärla
@@ -10221,8 +10221,8 @@
 10219,Pyrrhula leucogenis,White-cheeked Bullfinch,vitkindad domherre 
 10220,Pyrrhula pyrrhula,Eurasian Bullfinch,domherre 
 10221,Pyrrhula murina,Azores Bullfinch,azorisk domherre 
-10222,Rhodopechys sanguineus,Asian Crimson-winged Finch,asiatisk bergsökenfink (61)
-10223,Rhodopechys alienus,African Crimson-winged Finch,afrikansk bergsökenfink (61)
+10222,Rhodopechys sanguineus,Asian Crimson-winged Finch,asiatisk bergsökenfink
+10223,Rhodopechys alienus,African Crimson-winged Finch,afrikansk bergsökenfink
 10224,Bucanetes githagineus,Trumpeter Finch,ökentrumpetare 
 10225,Bucanetes mongolicus,Mongolian Finch,mongolfink 
 10226,Agraphospiza rubescens,Blanford's Rosefinch,karmosinfink 
@@ -10357,14 +10357,14 @@
 10355,Linaria cannabina,Common Linnet,hämpling
 10356,Linaria yemenensis,Yemen Linnet,jemenhämpling
 10357,Linaria johannis,Warsangli Linnet,somaliahämpling 
-10358,Acanthis flammea,Common Redpoll,gråsiska (62)
-10359,Acanthis cabaret,Lesser Redpoll,brunsiska (62)
-10360,Acanthis hornemanni,Arctic Redpoll,snösiska (62)
+10358,Acanthis flammea,Common Redpoll,gråsiska
+10359,Acanthis cabaret,Lesser Redpoll,brunsiska
+10360,Acanthis hornemanni,Arctic Redpoll,snösiska
 10361,Loxia pytyopsittacus,Parrot Crossbill,större korsnäbb 
 10362,Loxia scotica,Scottish Crossbill,skotsk korsnäbb 
 10363,Loxia curvirostra,Red Crossbill,mindre korsnäbb
 10364,Loxia sinesciuris,Cassia Crossbill,cassiakorsnäbb
-10365,Loxia leucoptera,Two-barred Crossbill,bändelkorsnäbb (63)
+10365,Loxia leucoptera,Two-barred Crossbill,bändelkorsnäbb
 10366,Loxia megaplaga,Hispaniolan Crossbill,hispaniolakorsnäbb
 10367,Chrysocorythus estherae,Indonesian Serin,bergsiska
 10368,Chrysocorythus mindanensis,Mindanao Serin,mindanaosiska
@@ -10544,10 +10544,10 @@
 10542,Arremon brunneinucha,Chestnut-capped Brushfinch,kastanjekronad sparv
 10543,Arremon crassirostris,Sooty-faced Finch,brunkronad sparv
 10544,Arremon castaneiceps,Olive Finch,ravinsparv
-10545,Passerella unalaschcensis,Sooty Fox Sparrow,brunrävsparv (64)
-10546,Passerella schistacea,Slate-colored Fox Sparrow,skifferrävsparv (64)
-10547,Passerella megarhyncha,Thick-billed Fox Sparrow,tjocknäbbad rävsparv (64)
-10548,Passerella iliaca,Red Fox Sparrow,rosträvsparv (64)
+10545,Passerella unalaschcensis,Sooty Fox Sparrow,brunrävsparv
+10546,Passerella schistacea,Slate-colored Fox Sparrow,skifferrävsparv
+10547,Passerella megarhyncha,Thick-billed Fox Sparrow,tjocknäbbad rävsparv
+10548,Passerella iliaca,Red Fox Sparrow,rosträvsparv
 10549,Spizelloides arborea,American Tree Sparrow,tundrasparv
 10550,Junco vulcani,Volcano Junco,vulkanjunco
 10551,Junco insularis,Guadalupe Junco,guadalupejunco
@@ -10807,8 +10807,8 @@
 10805,Setophaga magnolia,Magnolia Warbler,magnoliaskogssångare
 10806,Setophaga castanea,Bay-breasted Warbler,brunbröstad skogssångare
 10807,Setophaga fusca,Blackburnian Warbler,orangestrupig skogssångare
-10808,Setophaga aestiva,American Yellow Warbler,gul skogssångare (65)
-10809,Setophaga petechia,Mangrove Warbler,mangroveskogssångare (65)
+10808,Setophaga aestiva,American Yellow Warbler,gul skogssångare
+10809,Setophaga petechia,Mangrove Warbler,mangroveskogssångare
 10810,Setophaga pensylvanica,Chestnut-sided Warbler,brunsidig skogssångare
 10811,Setophaga striata,Blackpoll Warbler,vitkindad skogssångare
 10812,Setophaga caerulescens,Black-throated Blue Warbler,blåryggig skogssångare

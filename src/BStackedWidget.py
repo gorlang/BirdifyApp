@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QStackedWidget
 from WidgetHome import WidgetHome
+from WidgetAbout import WidgetAbout
 from WidgetLibrary import WidgetLibrary
 from WidgetLocation import WidgetLocation
 from WidgetSearch import WidgetSearch
@@ -17,4 +18,5 @@ class BStackedWidget(QStackedWidget):
         self.addWidget(WidgetShare(parent))
         self.addWidget(WidgetFiles(parent))
         self.addWidget(WidgetSettings(parent))
+        self.addWidget(WidgetAbout(parent))
         self.setCurrentIndex(0)
