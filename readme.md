@@ -8,9 +8,9 @@ Birdify can also detect bird sounds in audio files loaded from disk and plot spe
 
 Birdify is a desktop-app created with Qt/Pyside6 and the AI functionality is powered by BirdNET:s TensorFlow model BirdNETLite, developed at The Cornell Lab of Ornithology and Chemnitz University of Technology.
 
-More info with screen shots here:
+Screenshot from the app:
 
-(https://knutas.com/birdify/)
+![Screenshot](screenshot.png)
 
 ## DEPENDENCIES
 
