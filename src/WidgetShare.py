@@ -4,6 +4,7 @@ from datetime import datetime as dt
 from PySide6.QtCore import QUrl
 from PySide6.QtGui import QDesktopServices
 from PySide6.QtWidgets import QHBoxLayout, QMessageBox, QPushButton, QVBoxLayout, QWidget
+from AppConfig import AppConfig
 from AppLog import Log
 from BLabel import BLabel
 from PFilterDial import PFilterDial
@@ -21,14 +22,12 @@ class WidgetShare(QWidget):
 
         self._filter_p = 0.5 # if has value => use this ref in PFilterDial()
 
-        # for test
-        #ts = dt.now().strftime("%Y-%m-%d %H:%M:%S")
-        #self._parent._stats._detect_stats = [{"timestamp": ts, "p": 0.3, "name_sci":"sciname1", "name_sv": "Baratt's warbler", "name_en": "Baratt's warbler"}, {"timestamp": ts, "p": 0.5, "name_sci":"sciname2", "name_sv": "bofink", "name_en": "booofink"}, {"timestamp": ts, "p": 1, "name_sci":"sciname2", "name_sv": "bofink", "name_en": "booofink"}]
+        # used for dev/test
+        if AppConfig().isTest():
+            ts = dt.now().strftime("%Y-%m-%d %H:%M:%S")
+            self._parent._stats._detect_stats = [{"timestamp": ts, "p": 0.3, "name_sci":"sciname1", "name_sv": "Baratt's warbler", "name_en": "Baratt's warbler"}, {"timestamp": ts, "p": 0.5, "name_sci":"sciname2", "name_sv": "bofink", "name_en": "booofink"}, {"timestamp": ts, "p": 1, "name_sci":"sciname2", "name_sv": "bofink", "name_en": "booofink"}]
       
         layout = QVBoxLayout()
-
-        layout.addWidget(BLabel("Species List", 14))
-
         for value in [parent._site_name]:
             label = BLabel(value, 14)
             self._parent._share_labels.append(label)
@@ -77,25 +76,38 @@ class WidgetShare(QWidget):
         else:
             self.table.setData(0, [], None)
 
+    def getSelectedNames(self):
+        selectedNames = {}
+        for i, selectedIndex in enumerate(self.table.selectedIndexes()):
+            name = " ".join(selectedIndex.data().split(" ")[0:-1])
+            selectedNames[name] = name
+        return selectedNames
+
     def getQueryUrl(self, baseUrl, site_name, site_url, country):
+        selectedNamesLookup = self.getSelectedNames()
         json_out = []
         for item in self._json_data:
-            item["site"] = site_name
-            item["url"] = site_url
-            item["country"] = country
-            json_out.append(json.dumps(item))
+            name_lang = "name_" + self._parent._lang
+            if item[name_lang] in selectedNamesLookup:
+                item["site"] = site_name
+                item["url"] = site_url
+                item["country"] = country
+                json_out.append(json.dumps(item))
         json_str = "".join(["[", ",".join(json_out), "]"])
         return baseUrl + "?json=" + json_str
 
     def share(self):
         if self._json_data != None and len(self._json_data) > 0:
-            url = self.getQueryUrl(
-                self._parent._config.BIRDIFY_WEB_URL,
-                self._parent._site_name, 
-                self._parent._site_url,
-                self._parent._country
-                )
-            log.info(f"url={url}")
-            QDesktopServices.openUrl(QUrl(url, QUrl.TolerantMode))
+            if len(self.table.selectedIndexes()) > 0:
+                url = self.getQueryUrl(
+                    self._parent._config.BIRDIFY_WEB_URL,
+                    self._parent._site_name, 
+                    self._parent._site_url,
+                    self._parent._country
+                    )
+                log.info(f"url={url}")
+                QDesktopServices.openUrl(QUrl(url, QUrl.TolerantMode))
+            else:
+                QMessageBox.warning(None, "", "Select one or more species to share!")
         else:
             QMessageBox.warning(None, "", "Species list is empty!")
