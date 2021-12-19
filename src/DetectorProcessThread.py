@@ -52,7 +52,8 @@ class DetectorProcessThread(QThread):
 
     def parseFilteredList(self, filteredList, ts, row_index=0):
         item = self._detector_util.asDict(filteredList[row_index], ts)
-        title = f"{item['name_sv']}/{item['name_en']}/{item['name_sci']}"
+        lang_ref = "name_" + self._parent._lang
+        title = f"{item[lang_ref]}/{item['name_sci']}"
         return item, title
 
     def run(self):
