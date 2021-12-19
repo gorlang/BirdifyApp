@@ -83,3 +83,9 @@ theme = DARK
 1. The BirdNETLite Tensorflow model is developed at The Cornell Lab of Ornithology and Chemnitz University of Technology. Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 2. Fugue Icons (C) 2013 Yusuke Kamiyamane. All rights reserved. Icons are licensed under a Creative Commons Attribution 3.0 License. (http://creativecommons.org/licenses/by/3.0/)
+
+## LOGO
+
+The Birdify! Logo:
+
+![LOGO](src/icons/birdify-logo-4.png)
