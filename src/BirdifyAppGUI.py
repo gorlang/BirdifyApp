@@ -78,7 +78,11 @@ class MainWindow(QMainWindow):
             label.setText(values[i])
 
     def updateSettings(self):
-        self._coords = self._countries.getCoords(self._country)
+        coords_site = self._sites.getCoords(self._site_name)
+        if coords_site != None:
+            self._coords = coords_site
+        else:
+            self._coords = self._countries.getCoords(self._country)
         coords = f"Lat={self._coords[0]}, Lon={self._coords[1]}"
         footer_txt = f"{self._country}, w{self._week}, {coords}"
         self.updateFooterLabels(footer_txt)
