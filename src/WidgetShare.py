@@ -36,6 +36,18 @@ class WidgetShare(QWidget):
         self.table = SearchTable(parent, ["" for i in range(1,100)])
         layout.addWidget(self.table)
 
+        # search buttons - start
+        layout_buttons_search = QHBoxLayout()
+        search_button_1 = QPushButton("Google Search")
+        search_button_1.clicked.connect(self.doGoogleSearch)
+        layout_buttons_search.addWidget(search_button_1)
+
+        search_button_2 = QPushButton("Xeno-Canto Search")
+        search_button_2.clicked.connect(self.doXenoCantoSearch)
+        layout_buttons_search.addWidget(search_button_2)
+        layout.addLayout(layout_buttons_search)
+        # search buttons - end
+
         self._label_filter_dial = BLabel(parent._config.DIAL_FILTER_P + "=" + str(self._filter_p), 14)
         layout.addWidget(self._label_filter_dial)
         layout.addWidget(PFilterDial(parent, self))
@@ -105,9 +117,38 @@ class WidgetShare(QWidget):
                     self._parent._site_url,
                     self._parent._country
                     )
-                log.info(f"url={url}")
+                #log.info(f"url={url}")
                 QDesktopServices.openUrl(QUrl(url, QUrl.TolerantMode))
             else:
                 QMessageBox.warning(None, "", "Select one or more species to share!")
         else:
             QMessageBox.warning(None, "", "Species list is empty!")
+
+    def getSelectedNames(self):
+        selectedNames = []
+        for i, selectedIndex in enumerate(self.table.selectedIndexes()):
+            if selectedIndex.data() != None:
+                words = selectedIndex.data().split(" ")[0:-1]
+                name = " ".join(words)
+                selectedNames.append(name)
+        return selectedNames
+
+    def doGoogleSearch(self):
+        names = self.getSelectedNames()
+        if len(names) > 0:
+            search_url = "https://www.google.com/search?q="
+            search_str = '"' +  names[0] + '"'
+            log.info(f"search_str={search_str}")
+            QDesktopServices.openUrl(QUrl(search_url + search_str, QUrl.TolerantMode))
+        else:
+            QMessageBox.warning(None, "", "Select a species!")
+
+    def doXenoCantoSearch(self):
+        names = self.getSelectedNames()
+        if len(names) > 0:
+            search_url = "https://xeno-canto.org/explore?query="
+            search_str = names[0]
+            log.info(f"search_str={search_str}")
+            QDesktopServices.openUrl(QUrl(search_url + search_str, QUrl.TolerantMode))
+        else:
+            QMessageBox.warning(None, "", "Select a species!")
